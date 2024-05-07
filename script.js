@@ -81,9 +81,6 @@ fetch(request)
         data
     };
 
-    //const idtest = document.getElementById("canvas");
-    //const testGraph = new Chart(idtest, config);
-
     const canvas = document.getElementById('canvas');
-    const scb = new Chart(canvas, config);
+    const testChart = new Chart(canvas, config);
 });
