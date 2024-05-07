@@ -55,15 +55,15 @@ fetch(request)
     // skriver ut en array av info från länken
     console.log(testData)
 
-    //utsläpp av växthusgaser
+    // sparar ner utsläpp av växthusgaser som values
     const values = testData.data.map((value) => value.values[0]);
     console.log(values);
 
-    //åren
+    // sparar ner årtal som labels
     const labels = testData.data.map((value) => value.key[2]);
     console.log("Årtal", labels);
 
-    //skapa diagram
+    // skapar linjediagram
     const datasets = [{
         label: "Totala växthusgaser",
         data: values
@@ -81,6 +81,7 @@ fetch(request)
         data
     };
 
+    // visar diagrammet
     const canvas = document.getElementById('canvas');
     const testChart = new Chart(canvas, config);
 });
