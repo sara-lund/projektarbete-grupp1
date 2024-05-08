@@ -41,7 +41,7 @@ a:link, a:visited{
 }
 
 .test{
-    padding-left: 15px;
+    padding: 20px 0px 0px 30px;
 }
 
 .container-test{
