@@ -4,7 +4,8 @@
 }
 
 body{
-    background-color: #FFFAFA;
+    width: 100vw;
+    height: 100vh;
 }
 
 .top-nav{
@@ -41,4 +42,12 @@ a:link, a:visited{
 
 .test{
     padding-left: 15px;
+}
+
+.container-test{
+    background-color:#FFFAFA;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
 }
