@@ -7,7 +7,7 @@ body{
     background-color: #FFFAFA;
 }
 
-nav{
+.top-nav{
     background-image: url(pattern.jpg);
     height: 20vh;
     background-size:cover;
@@ -20,4 +20,25 @@ nav{
 
 .subtitle{
     color: white;
+}
+
+a:link, a:visited{
+    color: black;
+}
+
+.active{
+    border-bottom: solid 3px black;
+    font-weight: bold;
+}
+
+.menu-hover:hover{
+    color: rgb(255,191,216);
+}
+
+.shadow-test{
+    box-shadow: 0px 3px 3px #4242423d;
+}
+
+.test{
+    padding-left: 15px;
 }
