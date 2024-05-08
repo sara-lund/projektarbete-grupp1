@@ -36,15 +36,15 @@ a:link, a:visited{
     color: rgb(255,191,216);
 }
 
-.shadow-test{
+.navbar-shadow{
     box-shadow: 0px 3px 3px #4242423d;
 }
 
-.test{
+.main-title{
     padding: 20px 0px 0px 30px;
 }
 
-.container-test{
+.main-bg{
     background-color:#FFFAFA;
     margin: 0;
     padding: 0;
