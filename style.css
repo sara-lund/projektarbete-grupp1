@@ -13,7 +13,7 @@ body{
 .top-nav{
     background-image: url(cover_image.jpg);
     background-blend-mode: hard-light;
-    height: 25vh;
+    height: 160px;
     background-size:cover;
     background-color: rgb(150 43 86);
 }
@@ -26,13 +26,16 @@ body{
     color: white;
 }
 
-.nav-item .nav-link{
-    padding-bottom: 2px;
-}
-
+/*padding på menyn -- fråga mikaela*/
+/*
 .nav-item{
     padding: 0 50px 5px 0;
 }
+
+.nav-item>.nav-link{
+    padding: 0 0 2px 0;
+}
+*/
 
 a:link, a:visited{
     color: black;
