@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter';
 }
 
 body{
@@ -10,10 +11,11 @@ body{
 }
 
 .top-nav{
-    background-image: url(pattern.jpg);
+    background-image: url(cover_image.jpg);
+    background-blend-mode: hard-light;
     height: 20vh;
     background-size:cover;
-    mix-blend-mode: multiply;
+    background-color: rgb(150 43 86);
 }
 
 .title{
@@ -62,5 +64,15 @@ a:link, a:visited{
 }
 
 .text-test{
-    border: 2px solid black;
+    margin: 5%;
+}
+
+.title, .subtitle{
+    font-weight: 700;
+}
+
+.heading{
+    font-weight: 700;
+    font-size:x-large;
+    padding-top: 35px;
 }
