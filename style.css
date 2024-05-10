@@ -85,7 +85,7 @@ a:link, a:visited{
 }
 
 .title{
-    font-size: 45px;
+    font-size: 3rem;
 }
 
 .heading{
@@ -100,4 +100,11 @@ ul{
 
 .navbar-container{
     padding-left: 15px;
+}
+
+span, .navbar-toggler-icon{
+    color: black;
+}
+.nav-item:last-child{
+    padding-right: 0px;
 }
