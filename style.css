@@ -13,11 +13,10 @@ body{
 .top-nav{
     background-image: url(cover_image.jpg);
     background-blend-mode: hard-light;
-    height: 22vh;
+    height: 25vh;
     background-size:cover;
     background-color: rgb(150 43 86);
 }
-
 
 .title{
     color: white;
@@ -27,8 +26,12 @@ body{
     color: white;
 }
 
-a{
-    padding: 0px 0px 30px 0px;
+.nav-item .nav-link{
+    padding-bottom: 2px;
+}
+
+.nav-item{
+    padding: 0 50px 5px 0;
 }
 
 a:link, a:visited{
@@ -44,16 +47,12 @@ a:link, a:visited{
     color: rgb(255,191,216);
 }
 
-.nav-item{
-    padding-right: 50px;
-}
-
 .navbar-shadow{
     box-shadow: 0px 3px 3px #4242423d;
 }
 
 .main-title{
-    padding: 30px 0px 0px 50px;
+    padding: 30px 0 0 50px;
 }
 
 .main-bg-test{
