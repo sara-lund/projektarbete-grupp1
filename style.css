@@ -29,6 +29,10 @@ body{
     padding: 0 50px 5px 0;
 }
 
+.nav-item:last-child{
+    padding-right: 0px;
+}
+
 /*padding på menyn -- fråga mikaela*/
 /*
 .nav-item>.nav-link{
@@ -36,26 +40,29 @@ body{
 }
 */
 
+
 a:link, a:visited{
     color: black;
 }
 
-.active, .active:hover{
+.menu-hover{
+    border-bottom: solid 2px rgb(0, 0, 0, 0);
+    transition: all 0.1s;
+}
+
+
+.active{
     border-bottom: solid 2px black;
     font-weight: bold;
     pointer-events: none;
 }
 
-.menu-hover{
-    transition: all 0.18s;
-    border-bottom: solid 2px rgba(0, 0, 0, 0);
-}
 
 .menu-hover:hover{
-    border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+    border-bottom: solid 2px rgb(0, 0, 0, 0.5);
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.5);
-    transition: all 0.18s ease;
+    transition: all 0.1s;
+    color: rgb(0, 0, 0, 0.5);
 }
 
 .navbar-shadow{
@@ -102,11 +109,4 @@ ul{
 
 .navbar-container{
     padding-left: 15px;
-}
-
-span, .navbar-toggler-icon{
-    color: black;
-}
-.nav-item:last-child{
-    padding-right: 0px;
 }
