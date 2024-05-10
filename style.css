@@ -47,14 +47,15 @@ a:link, a:visited{
 }
 
 .menu-hover{
-    transition: all 0.1s;
+    transition: all 0.18s;
+    border-bottom: solid 2px rgba(0, 0, 0, 0);
 }
 
 .menu-hover:hover{
-    border-bottom: solid 2px rgb(0, 0, 0);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.5);
     font-weight: bold;
-    color: rgb(197, 123, 164);
-    transition: all 0.5s ease;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.18s ease;
 }
 
 .navbar-shadow{
