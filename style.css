@@ -40,9 +40,10 @@ a:link, a:visited{
     color: black;
 }
 
-.active{
+.active, .active:hover{
     border-bottom: solid 2px black;
     font-weight: bold;
+    pointer-events: none;
 }
 
 .menu-hover{
@@ -52,8 +53,8 @@ a:link, a:visited{
 .menu-hover:hover{
     border-bottom: solid 2px rgb(0, 0, 0);
     font-weight: bold;
-    transition: all 0.1s;
-    color: rgb(0, 0, 0);
+    color: rgb(197, 123, 164);
+    transition: all 0.5s ease;
 }
 
 .navbar-shadow{
