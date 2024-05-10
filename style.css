@@ -76,3 +76,7 @@ a:link, a:visited{
     font-size:x-large;
     padding-top: 35px;
 }
+
+ul{
+    padding-left: 15px;
+}
