@@ -13,10 +13,11 @@ body{
 .top-nav{
     background-image: url(cover_image.jpg);
     background-blend-mode: hard-light;
-    height: 20vh;
+    height: 22vh;
     background-size:cover;
     background-color: rgb(150 43 86);
 }
+
 
 .title{
     color: white;
@@ -48,7 +49,7 @@ a:link, a:visited{
 }
 
 .main-title{
-    padding: 20px 0px 0px 30px;
+    padding: 30px 0px 0px 50px;
 }
 
 .main-bg-test{
@@ -71,6 +72,10 @@ a:link, a:visited{
     font-weight: 700;
 }
 
+.title{
+    font-size: 45px;
+}
+
 .heading{
     font-weight: 700;
     font-size:x-large;
@@ -78,5 +83,9 @@ a:link, a:visited{
 }
 
 ul{
+    padding-left: 15px;
+}
+
+.navbar-container{
     padding-left: 15px;
 }
