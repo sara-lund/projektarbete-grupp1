@@ -41,12 +41,19 @@ a:link, a:visited{
 }
 
 .active{
-    border-bottom: solid 3px black;
+    border-bottom: solid 2px black;
     font-weight: bold;
 }
 
+.menu-hover{
+    transition: all 0.1s;
+}
+
 .menu-hover:hover{
-    color: rgb(255,191,216);
+    border-bottom: solid 2px rgb(0, 0, 0);
+    font-weight: bold;
+    transition: all 0.1s;
+    color: rgb(0, 0, 0);
 }
 
 .navbar-shadow{
