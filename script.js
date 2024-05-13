@@ -43,6 +43,12 @@ const testQuery = {
   },
 };
 
+/* Markerar linje, där segmentpunkten är större än 4 och mindre än 8. Färg på 
+linje utanför intervallet bestäms av value. */
+
+const color = (ctx, value) =>
+  ctx.p0DataIndex > 4 && ctx.p0DataIndex < 8 ? value : "#C1C1C1";
+
 // Post request som sedan skickas med fetch
 const request = new Request(testDataUrl, {
   method: "POST",
@@ -71,6 +77,12 @@ fetch(request)
       {
         label: "Totala växthusgaser",
         data: values,
+        segment: {
+          borderColor: (ctx) => color(ctx, "#F15C8E"),
+        },
+        tension: 0.4,
+        pointBackgroundColor: "#F39EBB",
+        pointBorderColor: "black",
       },
     ];
 
