@@ -74,6 +74,7 @@ a:link, a:visited{
 }
 
 .main-bg-test{
+    min-height: 100vh;
     background-color:#FFFAFA;
     margin: 0;
     padding: 0;
