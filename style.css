@@ -110,3 +110,16 @@ ul{
 .navbar-container{
     padding-left: 15px;
 }
+
+/* 
+@media screen and (max-width: 992px) {
+    header{
+        position: relative;
+    }
+
+    nav{
+        position: absolute;
+        display: block;
+        z-index: 20;
+    }
+} */
