@@ -65,7 +65,7 @@ a:link, a:visited{
     color: rgb(0, 0, 0, 0.5);
 }
 
-.navbar-shadow{
+.shadow-effect{
     box-shadow: 0px 3px 3px #4242423d;
 }
 
@@ -110,4 +110,28 @@ ul{
 
 .navbar-container{
     padding-left: 15px;
+}
+
+
+.accordion-btn-style{
+    width: 100%;
+    font-size: 16px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.accordion-body{
+    background-color: white;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: -6px;
+    margin-bottom: 15px;
+    border: 1px solid lightgrey;
+    border-radius: 0 0 5px 5px;
 }
