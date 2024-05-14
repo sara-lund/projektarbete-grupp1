@@ -66,7 +66,7 @@ fetch(request)
 
   const datasets = [];
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < gases2.length; i++) {
     const data = valuesRaw.splice(0, labels.length);
 
     datasets[i] = {
