@@ -1,6 +1,8 @@
+//hitta url
 const urlSCB =
-  " https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI1301/MI1301F/MI1301MPCOICOPN";
+" https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI1301/MI1301F/MI1301MPCOICOPN";
 
+//info kring diagrammet
 querySCB = {
   query: [
     {
@@ -30,75 +32,78 @@ querySCB = {
   },
 };
 
+
+  //skapa förfrågan till given url, med given data som API:et vill ha
 const request = new Request(urlSCB, {
-  method: "POST",
-  body: JSON.stringify(querySCB),
-});
-
-fetch(request)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-
-    // Värden för växthusgaser
-    const values = data.data.map((value) => value.values[0]);
-    console.log(values);
-
-    // Växthusgaser
-    const gases = data.data.map((value) => value.key[1]);
-    console.log("Växthusgas", gases);
-
-    // sparar ner årtal som labels
-    const labels = data.data.map((value) => value.key[3]);
-    console.log("Årtal", labels);
-
-    const values18 = values.slice(0, 3);
-
-    const values19 = values.slice(4, 7);
-
-    const values20 = values.slice(8, 11);
-
-    // const valuesTest = [...new Set(labels)];
-
-    datasets = [
-      {
-        label: "Växthusgaser 1",
-        data: values18,
-      },
-      {
-        label: "Växthusgaser 2",
-        data: values19,
-      },
-      {
-        label: "Växthusgaser 3",
-        data: values20,
-      },
-    ];
-
-    const data2 = {
-      labels,
-      datasets,
-    };
-
-    const config = {
-      type: "bar",
-      data: data2,
-      options: {
-        responsive: true,
-        interaction: {
-          intersect: false,
-        },
-        scales: {
-          x: {
-            stacked: true,
-          },
-          y: {
-            stacked: true,
-          },
-        },
-      },
-    };
-
-    const canvas = document.getElementById("diagram3");
-    const chart3 = new Chart(canvas, config);
+    method: 'POST',
+    body: JSON.stringify(querySCB)
   });
+  
+//skicka själva förfrågan via HTTP med fetch api
+fetch(request)
+//gör om till json
+.then((response) => response.json())
+//callback som körs när data hämtats färdigt.
+.then((scbData) => {
+  //titta på data
+  console.log(scbData);
+
+  //behandla data
+  const labelsRaw = scbData.data.map((data) => data.key[3]);
+  console.log(labelsRaw)
+
+  const valuesRaw = scbData.data.map((data) => data.values[0]);
+  console.log(valuesRaw)
+
+  const gases = scbData.data.map((value) => value.key[1]);
+  console.log("Växthusgas", gases);
+
+  const labels = [...new Set(labelsRaw)];
+  console.log(labels)
+
+  const gases2 = [...new Set(gases)];
+  console.log(gases2)
+
+  const datasets = [];
+
+  for (let i = 0; i < gases2.length; i++) {
+    const data = valuesRaw.splice(0, labels.length);
+
+    datasets[i] = {
+      label: gases2[i],
+      data,
+    };
+  }
+
+  const data = {
+    //labels hämtade från scb på rad 53
+    labels,
+    datasets
+  };
+
+  console.log(data);
+
+  //charat type line istället för bar
+  const config = { 
+    type: 'bar', 
+    data,
+    options:{
+      responsive: true,
+      interaction:{
+        intersect: false,
+      },
+      scales:{
+        x:{
+          stacked: true
+        },
+        y:{
+          stacked: true
+        }
+      } 
+    }
+  };
+
+  //hämtar canvaselement med id scb
+  const canvas = document.getElementById('diagram3');
+  const testing = new Chart(canvas, config);
+});
