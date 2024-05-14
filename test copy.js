@@ -47,6 +47,7 @@ fetch(request)
 .then((scbData) => {
   //titta på data
   console.log(scbData);
+
   //behandla data
   const labelsRaw = scbData.data.map((data) => data.key[3]);
   console.log(labelsRaw)
@@ -65,11 +66,11 @@ fetch(request)
 
   const datasets = [];
 
-  for (let i = 0; i < valuesRaw.length; i++) {
+  for (let i = 0; i < 12; i++) {
     const data = valuesRaw.splice(0, labels.length);
 
     datasets[i] = {
-      labels: gases2[i],
+      label: gases2[i],
       data,
     };
   }
@@ -110,7 +111,6 @@ fetch(request)
   };
 
   console.log(data);
-
 
   //charat type line istället för bar
   const config = { 
