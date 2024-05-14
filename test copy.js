@@ -54,13 +54,30 @@ fetch(request)
   const valuesRaw = scbData.data.map((data) => data.values[0]);
   console.log(valuesRaw)
 
+  const gases = scbData.data.map((value) => value.key[1]);
+  console.log("Växthusgas", gases);
+
   const labels = [...new Set(labelsRaw)];
   console.log(labels)
 
-  const dataBorl = valuesRaw.splice(0, labels.length);
-  const dataFalun = valuesRaw;
+  const gases2 = [...new Set(gases)];
+  console.log(gases2)
 
-  console.log('borlänge', dataBorl, 'falun: ', dataFalun);
+  const datasets = [];
+
+  for (let i = 0; i < valuesRaw.length; i++) {
+    const data = valuesRaw.splice(0, labels.length);
+
+    datasets[i] = {
+      labels: gases2[i],
+      data,
+    };
+  }
+  
+/*
+  const dataBorl = valuesRaw.splice(0, labels.length);
+  const dataFalun = valuesRaw.splice(0, labels.length);
+  const datatest = valuesRaw;
 
   const datasets = [
     //endast ett dataset
@@ -72,10 +89,20 @@ fetch(request)
     {
         label: 'CO2',
         //värden hämtade från scb på rad 50
+        data: datatest,
+      }
+      {
+        label: 'CO2',
+        //värden hämtade från scb på rad 50
+        data: datatest2,
+      }
+      {
+        label: 'CO2',
+        //värden hämtade från scb på rad 50
         data: dataFalun,
       }
   ];
-
+*/
   const data = {
     //labels hämtade från scb på rad 53
     labels,
@@ -90,17 +117,12 @@ fetch(request)
     type: 'bar', 
     data,
     options:{
-      scales: {
-        x:{
-          stacked: true,
-        },
-        y:{
-          stacked: true,
-        }
+      responsive: true,
+      interaction:{
+        intersect: false,
       }
     }
   };
-
 
   //hämtar canvaselement med id scb
   const canvas = document.getElementById('scbtest');
