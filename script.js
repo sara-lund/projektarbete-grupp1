@@ -77,6 +77,7 @@ fetch(request)
       {
         label: "Totala växthusgaser",
         data: values,
+        backgroundColor: "#F39EBB",
         segment: {
           borderColor: (ctx) => color(ctx, "#F15C8E"),
         },
@@ -96,6 +97,22 @@ fetch(request)
     const config = {
       type: "line",
       data,
+      options: {
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: "Årtal",
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: "Mängd utsläpp i ton",
+            },
+          },
+        },
+      },
     };
 
     // visar diagrammet

@@ -101,7 +101,8 @@ a:link, a:visited{
 .heading{
     font-weight: 700;
     font-size:x-large;
-    padding-top: 35px;
+    margin-top: 35px;
+    margin-bottom: 40px;
 }
 
 ul{
@@ -134,4 +135,64 @@ ul{
     margin-bottom: 15px;
     border: 1px solid lightgrey;
     border-radius: 0 0 5px 5px;
+}
+
+.text-content{
+    margin-top: 30px;
+} 
+
+.icon-button {
+    margin-left: 15px;
+}
+
+
+i{
+    transform: translateY(10%);
+    font-size: 25px;
+}
+
+.example-graph{
+    padding: 30%;
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 576px){
+
+.heading{
+    font-size: 1.2rem;
+}
+
+.text-content {
+    font-size: 0.9rem;
+}
+
+.title{
+    font-size: 2.4rem;
+}
+
+.subtitle{
+    font-size: 1.4rem;
+}
+
+.top-nav{
+    height: 140px;
+}
+    
+}
+
+@media screen and (max-width: 768px){
+
+    .heading{
+        font-size: 1.4rem ;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+
+    .nav-item{
+        padding-right: 0px;
+        width: 80px;
+    }
+    
 }
