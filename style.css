@@ -130,6 +130,10 @@ a:link, a:visited{
     padding-top: 35px;
 }
 
+.heading-chart{
+    margin-bottom: 30px;
+}
+
 ul{
     padding-left: 15px;
 }
@@ -261,3 +265,11 @@ i{
         padding-right: 0px;
         width: 80px;
     }
+}
+
+
+canvas{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}

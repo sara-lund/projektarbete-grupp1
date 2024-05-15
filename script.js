@@ -75,7 +75,6 @@ fetch(request)
     // skapar linjediagram
     const datasets = [
       {
-        label: "Totala växthusgaser",
         data: values,
         backgroundColor: "#F39EBB",
         segment: {
@@ -98,6 +97,11 @@ fetch(request)
       type: "line",
       data,
       options: {
+        plugins:{
+          legend:{
+            display: false,
+          }
+        },
         scales: {
           x: {
             title: {
