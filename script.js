@@ -78,10 +78,10 @@ fetch(request)
         data: values,
         backgroundColor: "#F39EBB",
         segment: {
-          borderColor: (ctx) => color(ctx, "#F15C8E"),
+          borderColor: (ctx) => color(ctx, "black"),
         },
         tension: 0.4,
-        pointBackgroundColor: "#F39EBB",
+        pointBackgroundColor: "black",
         pointBorderColor: "black",
       },
     ];
@@ -97,22 +97,16 @@ fetch(request)
       type: "line",
       data,
       options: {
-        plugins:{
-          legend:{
+        plugins: {
+          legend: {
             display: false,
-          }
+          },
         },
         scales: {
-          x: {
-            title: {
-              display: true,
-              text: "Årtal",
-            },
-          },
           y: {
             title: {
               display: true,
-              text: "Mängd utsläpp i ton",
+              text: "Mängd (ton)",
             },
           },
         },

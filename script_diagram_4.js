@@ -1,22 +1,22 @@
 //hitta url
 const urlSCB =
-  " https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI1301/MI1301F/MI1301MPCOICOPN";
+  "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HA/HA0201/HA0201B/ImpExpKNTotAr";
 
 //info kring diagrammet
 querySCB = {
   query: [
     {
-      code: "Uppkomst",
+      code: "VarugruppKN",
       selection: {
-        filter: "item",
-        values: ["SE"],
+        filter: "vs:KNOriginalNivå2A",
+        values: ["61", "62"],
       },
     },
     {
-      code: "Produktgrupper",
+      code: "ContentsCode",
       selection: {
-        filter: "vs:COICOPMI1301(grov)n",
-        values: ["03"],
+        filter: "item",
+        values: ["HA0201AL", "HA0201AN"],
       },
     },
     {
@@ -28,7 +28,7 @@ querySCB = {
     },
   ],
   response: {
-    format: "json",
+    format: "JSON",
   },
 };
 
@@ -47,32 +47,26 @@ fetch(request)
     //titta på data
     console.log(scbData);
 
-    //behandla data
-    const labelsRaw = scbData.data.map((data) => data.key[3]);
+    const labelsRaw = scbData.data.map((data) => data.key[1]);
     console.log(labelsRaw);
-
-    const valuesRaw = scbData.data.map((data) => data.values[0]);
-    console.log(valuesRaw);
-
-    const gases = scbData.data.map((value) => value.key[1]);
-    console.log("Växthusgas", gases);
 
     const labels = [...new Set(labelsRaw)];
     console.log(labels);
 
-    const gases2 = [...new Set(gases)];
-    console.log(gases2);
+    const valuesImport = scbData.data.map((data) => data.values[0]);
+    console.log(valuesImport);
 
-    const datasets = [];
+    const valuesExport = scbData.data.map((data) => data.values[1]);
+    console.log(valuesExport);
 
-    for (let i = 0; i < gases2.length; i++) {
-      const data = valuesRaw.splice(0, labels.length);
+    // const data = valuesRaw.splice(0, labels.length);
 
-      datasets[i] = {
-        label: gases2[i],
-        data,
-      };
-    }
+    const datasets = [
+      { label: "Import", data: valuesImport },
+      { label: "Export", data: valuesExport },
+    ];
+
+    console.log(datasets);
 
     const data = {
       //labels hämtade från scb på rad 53
@@ -84,46 +78,15 @@ fetch(request)
 
     //charat type line istället för bar
     const config = {
-      type: "bar",
-      data,
+      type: "bubble",
+      data: data,
       options: {
-        plugins:{
-          legend:{
-            labels: {
-              boxHeight: '5',
-              font:{
-                  size: 10, 
-              }
-            }
-          },
-          customCanvasBackgroundColor:{
-            color: 'white',
-          }
-        },
         responsive: true,
-        interaction: {
-          intersect: false,
-        },
-        scales: {
-          x: {
-            title: {
-              display: true,
-              text: "Årtal",
-            },
-            stacked: true,
-          },
-          y: {
-            title: {
-              display: true,
-              text: "Mängd utsläpp i ton",
-            },
-            stacked: true,
-          },
-        },
+        scales: {},
       },
     };
 
     //hämtar canvaselement med id scb
-    const canvas = document.getElementById("diagram3");
+    const canvas = document.getElementById("diagram4");
     const testing = new Chart(canvas, config);
   });
