@@ -106,18 +106,18 @@ fetch(request)
       type: "bar",
       data,
       options: {
-        plugins:{
-          legend:{
+        plugins: {
+          legend: {
             labels: {
-              boxHeight: '5',
-              font:{
-                  size: 10, 
-              }
-            }
+              boxHeight: "5",
+              font: {
+                size: 10,
+              },
+            },
           },
-          customCanvasBackgroundColor:{
-            color: 'white',
-          }
+          customCanvasBackgroundColor: {
+            color: "white",
+          },
         },
         responsive: true,
         interaction: {
@@ -125,16 +125,12 @@ fetch(request)
         },
         scales: {
           x: {
-            title: {
-              display: true,
-              text: "Årtal",
-            },
             stacked: true,
           },
           y: {
             title: {
               display: true,
-              text: "Mängd utsläpp i ton",
+              text: "Mängd (ton)",
             },
             stacked: true,
           },

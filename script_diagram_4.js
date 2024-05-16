@@ -59,12 +59,26 @@ fetch(request)
     const valuesExport = scbData.data.map((data) => data.values[1]);
     console.log(valuesExport);
 
+    const values61Im = valuesImport.splice(0, 4);
+    console.log(values61Im);
+
+    const values61Ex = valuesImport.splice(0, 4);
+    console.log(values61Ex);
+
+    // https://stackoverflow.com/questions/24094466/sum-two-arrays-in-single-iteration
+
+    const values = values61Im.map((value, i) => {
+      const sum = Number(value) + Number(values61Ex[i]);
+      return sum;
+    });
+
+    console.log(values);
+
+    console.log(values.toString());
+
     // const data = valuesRaw.splice(0, labels.length);
 
-    const datasets = [
-      { label: "Import", data: valuesImport },
-      { label: "Export", data: valuesExport },
-    ];
+    const datasets = [{ label: "Export", data: values61Ex }];
 
     console.log(datasets);
 
@@ -78,15 +92,17 @@ fetch(request)
 
     //charat type line istället för bar
     const config = {
-      type: "bubble",
+      type: "polarArea",
       data: data,
       options: {
         responsive: true,
-        scales: {},
+        scale: {
+          suggestedMax: 90000,
+        },
       },
     };
 
     //hämtar canvaselement med id scb
-    const canvas = document.getElementById("diagram4");
+    const canvas = document.getElementById("diagram4.1");
     const testing = new Chart(canvas, config);
   });

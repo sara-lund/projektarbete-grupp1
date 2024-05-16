@@ -77,6 +77,7 @@ fetch(request)
       {
         data: values,
         backgroundColor: "#F39EBB",
+        //pointRadius: 0,
         segment: {
           borderColor: (ctx) => color(ctx, "black"),
         },
