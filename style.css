@@ -294,3 +294,7 @@ canvas{
     border-radius: 5px;
     padding: 10px;
 }
+
+.accordion-body{
+    overflow-wrap: break-word;
+}
