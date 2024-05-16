@@ -198,6 +198,11 @@ ul{
     margin-top: 15px;
 }
 
+.btn-style:hover{
+    background-color: lightgrey;
+}
+
+
 .testt:hover{
     text-decoration: none;
 }
@@ -229,6 +234,11 @@ i{
 
 .text-format{
     column-count: 2;
+}
+
+/* Ha margin-left för rubriken för diagram 4 eller inte? */
+.chart-4-heading {
+    margin-left: 17%;
 }
 
 @media screen and (max-width: 576px){
