@@ -53,32 +53,38 @@ fetch(request)
     const labels = [...new Set(labelsRaw)];
     console.log(labels);
 
+    // Innehåller alla värden för import både 62 och 61
     const valuesImport = scbData.data.map((data) => data.values[0]);
-    console.log(valuesImport);
+    console.log("Import värden:", valuesImport);
 
+    // Innehåller alla värden för export både 62 och 61
     const valuesExport = scbData.data.map((data) => data.values[1]);
-    console.log(valuesExport);
+    console.log("Export värden:", valuesExport);
+
+    const values61Ex = valuesExport.splice(0, 4);
 
     const values61Im = valuesImport.splice(0, 4);
-    console.log(values61Im);
-
-    const values61Ex = valuesImport.splice(0, 4);
-    console.log(values61Ex);
 
     // https://stackoverflow.com/questions/24094466/sum-two-arrays-in-single-iteration
 
-    const values = values61Im.map((value, i) => {
-      const sum = Number(value) + Number(values61Ex[i]);
+    // Byta ut till värden för 62 så att det summeras med 61
+    const sumValuesIm = values61Im.map((value, i) => {
+      const sum = Number(value) + Number(valuesImport[i]);
       return sum;
     });
 
-    console.log(values);
-
-    console.log(values.toString());
+    const sumValuesEx = values61Ex.map((value, i) => {
+      const sum = Number(value) + Number(valuesExport[i]);
+      return sum;
+    });
 
     // const data = valuesRaw.splice(0, labels.length);
 
-    const datasets = [{ label: "Export", data: values61Ex }];
+    console.log("Import summerat:", sumValuesIm);
+    console.log("Export summerat:", sumValuesEx);
+
+    const datasets = [{ label: "Import", data: sumValuesIm }];
+    const datasets2 = [{ label: "Export", data: sumValuesEx }];
 
     console.log(datasets);
 
@@ -88,9 +94,15 @@ fetch(request)
       datasets,
     };
 
+    const data2 = {
+      //labels hämtade från scb på rad 53
+      labels,
+      datasets: datasets2,
+    };
+
     console.log(data);
 
-    //charat type line istället för bar
+    // Config för import diagram
     const config = {
       type: "polarArea",
       data: data,
@@ -102,7 +114,22 @@ fetch(request)
       },
     };
 
+    // Config för export diagram
+    const config2 = {
+      type: "polarArea",
+      data: data2,
+      options: {
+        responsive: true,
+        scale: {
+          suggestedMax: 160000,
+        },
+      },
+    };
+
     //hämtar canvaselement med id scb
-    const canvas = document.getElementById("diagram4.1");
+    const canvas = document.getElementById("diagram4");
     const testing = new Chart(canvas, config);
+
+    const canvas2 = document.getElementById("diagram4-2");
+    const testing2 = new Chart(canvas2, config2);
   });
