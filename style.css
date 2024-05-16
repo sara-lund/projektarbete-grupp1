@@ -227,6 +227,10 @@ i{
     background-color: lightgray;
 }
 
+.text-format{
+    column-count: 2;
+}
+
 @media screen and (max-width: 576px){
 
 .heading{
@@ -248,6 +252,7 @@ i{
 .top-nav{
     height: 140px;
 }
+
     
 }
 
@@ -257,7 +262,8 @@ i{
         font-size: 1.4rem ;
     }
 
-}
+
+    }
 
 @media screen and (max-width: 992px){
 
@@ -265,6 +271,11 @@ i{
         padding-right: 0px;
         width: 80px;
     }
+
+    
+.text-format {
+    column-count: 1;
+}
 }
 
 

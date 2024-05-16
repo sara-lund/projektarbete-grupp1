@@ -83,8 +83,8 @@ fetch(request)
     console.log("Import summerat:", sumValuesIm);
     console.log("Export summerat:", sumValuesEx);
 
-    const datasets = [{ label: "Import", data: sumValuesIm }];
-    const datasets2 = [{ label: "Export", data: sumValuesEx }];
+    const datasets = [{ label: "ton", data: sumValuesIm }];
+    const datasets2 = [{ label: "ton", data: sumValuesEx }];
 
     console.log(datasets);
 
@@ -107,6 +107,12 @@ fetch(request)
       type: "polarArea",
       data: data,
       options: {
+        plugins: {
+          title: {
+            display: true,
+            text: "Import (i ton)",
+          },
+        },
         responsive: true,
         scale: {
           suggestedMax: 90000,
@@ -119,6 +125,12 @@ fetch(request)
       type: "polarArea",
       data: data2,
       options: {
+        plugins: {
+          title: {
+            display: true,
+            text: "Export (i ton)",
+          },
+        },
         responsive: true,
         scale: {
           suggestedMax: 160000,
@@ -127,7 +139,7 @@ fetch(request)
     };
 
     //hämtar canvaselement med id scb
-    const canvas = document.getElementById("diagram4");
+    const canvas = document.getElementById("diagram4-1");
     const testing = new Chart(canvas, config);
 
     const canvas2 = document.getElementById("diagram4-2");
