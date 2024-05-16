@@ -73,6 +73,8 @@ querySCB2 = {
     }
   ],
   "response": {
-    "format": "px"
+    "format": "json"
   }
 };
+
+
