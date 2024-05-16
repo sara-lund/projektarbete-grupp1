@@ -13,6 +13,25 @@ querySCB = {
       },
     },
     {
+      "code": "AmneMiljo",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "CO2",
+          "CH4",
+          "N2O",
+          "F-gas",
+          "SO2",
+          "NOx",
+          "CO",
+          "NMVOC",
+          "NH3",
+          "PM10",
+          "PM2,5"
+        ]
+      }
+    },
+    {
       code: "Produktgrupper",
       selection: {
         filter: "vs:COICOPMI1301(grov)n",
