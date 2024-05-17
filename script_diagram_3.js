@@ -13,10 +13,10 @@ querySCB = {
       },
     },
     {
-      "code": "AmneMiljo",
-      "selection": {
-        "filter": "item",
-        "values": [
+      code: "AmneMiljo",
+      selection: {
+        filter: "item",
+        values: [
           "CO2",
           "CH4",
           "N2O",
@@ -27,9 +27,9 @@ querySCB = {
           "NMVOC",
           "NH3",
           "PM10",
-          "PM2,5"
-        ]
-      }
+          "PM2,5",
+        ],
+      },
     },
     {
       code: "Produktgrupper",
