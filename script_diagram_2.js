@@ -38,6 +38,27 @@ querySCB = {
     },
   ],
   response: {
-    format: "px",
+    format: "JSON",
   },
 };
+
+const request = new Request(urlSCB, {
+  method: "POST",
+  body: JSON.stringify(querySCB),
+});
+
+fetch(request)
+  .then((response) => response.json())
+  .then((SCBdata) => {
+    console.log(SCBdata);
+
+    // Hämta ut årtalen
+    const labelsRaw = SCBdata.data.map((label) => label.key[2]);
+
+    // Kombinerar dubletter av årtal till ett enda årtal
+    const labels = [...new Set(labelsRaw)];
+    console.log("Årtal", labels);
+
+    const valuesRaw = SCBdata.data.map((value) => value.values[0]);
+    console.log("Råa värden", valuesRaw);
+  });
