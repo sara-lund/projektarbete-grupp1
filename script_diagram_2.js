@@ -84,6 +84,10 @@ fetch(request)
     });
     console.log(summa);
 
+
+    // referens: https://stackoverflow.com/questions/74712508/javascript-sum-of-two-numbers-inside-an-array-print-index-of-numbers-whoose-sum
+    // och: https://www.w3schools.com/jsref/jsref_parsefloat.asp
+
     // loop för att summera mängd/år
     for (let i = 0; i < SCBdata.data.length; i++) {
       const label = SCBdata.data[i].key[3];
