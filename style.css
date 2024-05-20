@@ -66,23 +66,24 @@ a:link, a:visited{
 }
 
 .menu-hover{
-    border-bottom: solid 2px rgb(0, 0, 0, 0);
+    border: none;
     transition: all 0.1s;
 }
 
 
 .active{
-    border-bottom: solid 2px black;
+    border: none;
     font-weight: bold;
     pointer-events: none;
 }
 
 
 .menu-hover:hover{
-    border-bottom: solid 2px rgb(0, 0, 0, 0.5);
+    border: none;
     font-weight: bold;
     transition: all 0.1s;
     color: rgb(0, 0, 0, 0.5);
+}
 }
 
 .shadow-effect{
@@ -100,10 +101,6 @@ a:link, a:visited{
 .col{
     margin: 0;
     padding: 0;
-}
-
-.text-test{
-    margin: 5%;
 }
 
 .intro-info-title{
@@ -219,12 +216,16 @@ i{
 }
 
 .text-format{
-    column-count: 2;
+    column-count: 1;
 }
 
-/* Ha margin-left för rubriken för diagram 4 eller inte? */
+.heading-chart{
+    padding-top: 10%;
+}
+
 .chart-4-heading {
     margin-left: 12vw;
+    padding-top: 6%;
 }
 
 canvas{
@@ -269,10 +270,6 @@ canvas{
         font-size: 0.9rem;
     }
 
-    .text-format {
-        column-count: 1;
-    }
-
     .chart-4-heading {
         margin-left: 8vw;
     }
@@ -301,6 +298,10 @@ canvas{
 
 .btn-style{
     font-size: 0.9rem;
+}
+
+.chart-4-heading {
+    margin-left: 12vw;
 }
     
 }
@@ -333,6 +334,26 @@ canvas{
         margin-left: 16.5vw;
     }
 
+    .menu-hover{
+        border-bottom: solid 2px rgb(0, 0, 0, 0);
+        transition: all 0.1s;
+    }
+    
+    
+    .active{
+        border-bottom: solid 2px black;
+        font-weight: bold;
+        pointer-events: none;
+    }
+    
+    
+    .menu-hover:hover{
+        border-bottom: solid 2px rgb(0, 0, 0, 0.5);
+        font-weight: bold;
+        transition: all 0.1s;
+        color: rgb(0, 0, 0, 0.5);
+    }
+
     }
 
  @media screen and (min-width: 992px){
@@ -344,7 +365,7 @@ canvas{
     } 
 
     .text-format {
-        column-count: 1;
+        column-count: 2;
     }
 
     .btn-style{
