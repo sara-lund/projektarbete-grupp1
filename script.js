@@ -1,3 +1,5 @@
+// Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
+
 // Länk för att hämta ut data för totala utsläpp i industrin 2013-2022
 const testDataUrl =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/TotaltUtslappN";

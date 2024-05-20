@@ -1,3 +1,5 @@
+// Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
+
 //hitta url
 const urlSCB =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HA/HA0201/HA0201B/ImpExpKNTotAr";
