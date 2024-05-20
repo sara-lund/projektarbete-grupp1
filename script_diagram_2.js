@@ -4,6 +4,15 @@ const urlSCB =
 querySCB = {
   query: [
     {
+      "code": "Uppkomst",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "SE"
+        ]
+      }
+    },
+    {
       code: "AmneMiljo",
       selection: {
         filter: "item",
@@ -53,7 +62,7 @@ fetch(request)
     console.log(SCBdata);
 
     // Hämta ut årtalen
-    const labelsRaw = SCBdata.data.map((label) => label.key[2]);
+    const labelsRaw = SCBdata.data.map((label) => label.key[3]);
 
     // Kombinerar dubletter av årtal till ett enda årtal
     const labels = [...new Set(labelsRaw)];
@@ -76,7 +85,7 @@ fetch(request)
 
     // loop för att summera mängd/år
     for (let i = 0; i < SCBdata.data.length; i++) {
-      const label = SCBdata.data[i].key[2];
+      const label = SCBdata.data[i].key[3];
       const value = parseFloat(SCBdata.data[i].values[0]);
       
       // summan för varje år, label, sparas ner
@@ -87,6 +96,22 @@ fetch(request)
     // skapar en array 
     const values = sumYear.map((label) => summa[label]);
     console.log(values);
+
+   /*  // loop för att summera mängd/år för kläder
+
+    // tom array att använda för summan
+    let summa = {};
+
+    for (let i = 0; i < SCBdata.data.length; i++) {
+      if (SCBdata.data[i].key[1] === "3"){
+      const label = SCBdata.data[i].key[2];
+      const value = parseFloat(SCBdata.data[i].values[0]);
+      
+      // summan för varje år, label, sparas ner
+      summa2[label] += value;
+      }
+    }
+    console.log("Summa för respektive år: ", summa2);  */
 
     const datasets = [{
       labels,
