@@ -61,4 +61,53 @@ fetch(request)
 
     const valuesRaw = SCBdata.data.map((value) => value.values[0]);
     console.log("Råa värden", valuesRaw);
-  });
+
+    const sumYear = [...new Set(labelsRaw)];
+    console.log(sumYear);
+
+    // tom array att använda för summan
+    let summa = {};
+    
+    // summa för varje år tilldelas värde 0
+    labels.forEach(label => {
+      summa[label] = 0;
+    });
+    console.log(summa);
+
+    // loop för att summera mängd/år
+    for (let i = 0; i < SCBdata.data.length; i++) {
+      const label = SCBdata.data[i].key[2];
+      const value = parseFloat(SCBdata.data[i].values[0]);
+      
+      // summan för varje år, label, sparas ner
+      summa[label] += value;
+    }
+    console.log("Summa för respektive år: ", summa); 
+
+    // skapar en array 
+    const values = sumYear.map((label) => summa[label]);
+    console.log(values);
+
+    const datasets = [{
+      labels,
+      data: values,
+    }];
+
+    console.log(datasets);
+
+    const data = {
+      labels,
+      datasets,
+    };
+
+    console.log(data);
+
+    const config = {
+      type: "line",
+      data,
+    }
+
+    //hämtar canvaselement med id diagram 2
+    const canvas = document.getElementById("diagram2");
+    const testing = new Chart(canvas, config);
+});

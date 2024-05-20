@@ -93,6 +93,8 @@ fetch(request)
       };
     }
 
+    console.log(datasets);
+
     const data = {
       //labels hämtade från scb på rad 53
       labels,
