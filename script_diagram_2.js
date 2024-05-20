@@ -112,10 +112,13 @@ fetch(request)
       {
         label: "Total utsläpp",
         data: values,
+        fill: "origin",
+        backgroundColor: "#F39EBa7a",
       },
       {
         label: "Utsläpp kläder/skor",
         data: values2,
+        fill: "origin",
       },
     ];
 

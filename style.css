@@ -33,7 +33,6 @@ body{
 }
 
 .intro-info{
-    display: inline-block;
     color: white;
     width: 40%;
     padding: 15px;
@@ -45,16 +44,9 @@ body{
     font-weight: 900;
 }
 
-.title{
-    color: white;
-}
-
-.subtitle{
-    color: white;
-}
-
 .nav-item{
     padding: 0 50px 5px 0;
+    white-space: nowrap;
 }
 
 .nav-item:last-child{
@@ -97,10 +89,6 @@ a:link, a:visited{
     box-shadow: 0px 3px 3px #4242423d;
 }
 
-.main-title{
-    padding: 30px 0 0 50px;
-}
-
 .main-bg-test{
     min-height: 100vh;
     background-color:#e1eeef;
@@ -118,12 +106,13 @@ a:link, a:visited{
     margin: 5%;
 }
 
-.title, .subtitle{
+.intro-info-title{
     font-weight: 700;
 }
 
-.title{
-    font-size: 3rem;
+
+.intro-info-title{
+    font-size: 2.4rem;
 }
 
 .heading{
@@ -175,7 +164,6 @@ ul{
 }
 
 .navbar-toggler-icon{
-    display: f;
     justify-items: center;
     align-items: center;
 
@@ -188,7 +176,7 @@ ul{
 }
 
 .btn-style{
-    width: 50%;
+    width: 270px;
     font-size: 16px;
     background-color: white;
     border: none;
@@ -211,6 +199,7 @@ ul{
 
 .text-content{
     margin-top: 30px;
+    line-height: 1.75;
 } 
 
 .icon-button {
@@ -227,6 +216,7 @@ i{
 .fa-arrow-right{
     transform: translateY(15%);
     font-size: 18px;
+    margin-left: 10px;
 }
 
 .example-graph{
@@ -240,56 +230,8 @@ i{
 
 /* Ha margin-left för rubriken för diagram 4 eller inte? */
 .chart-4-heading {
-    margin-left: 17%;
+    margin-left: 12vw;
 }
-
-@media screen and (max-width: 576px){
-
-.heading{
-    font-size: 1.2rem;
-}
-
-.text-content {
-    font-size: 0.9rem;
-}
-
-.title{
-    font-size: 2.4rem;
-}
-
-.subtitle{
-    font-size: 1.4rem;
-}
-
-.top-nav{
-    height: 140px;
-}
-
-    
-}
-
-@media screen and (max-width: 768px){
-
-    .heading{
-        font-size: 1.4rem ;
-    }
-
-
-    }
-
-@media screen and (max-width: 992px){
-
-    .nav-item{
-        padding-right: 0px;
-        width: 80px;
-    }
-
-    
-.text-format {
-    column-count: 1;
-}
-}
-
 
 canvas{
     background-color: white;
@@ -300,3 +242,120 @@ canvas{
 .accordion-body{
     overflow-wrap: break-word;
 }
+
+.chart-spacing {
+    margin-bottom: 20px;
+}
+
+/* Media queries */
+@media screen and (max-width: 576px ){
+
+
+    .text-content {
+        font-size: 0.9rem;
+    }
+
+    .justify-content-center {
+        justify-content: flex-start;
+    }
+    
+    .intro-info-title{
+        font-size: 2rem;
+    }
+    
+    .top-nav{
+        height: 140px;
+    }
+    
+    .heading{
+        font-size: 1.2rem;
+    }
+
+    .btn-style{
+        font-size: 0.9rem;
+    }
+
+    .text-format {
+        column-count: 1;
+    }
+
+    .chart-4-heading {
+        margin-left: 8vw;
+    }
+}
+
+
+@media screen and (min-width: 576px ){
+
+
+.text-content {
+    font-size: 0.9rem;
+}
+
+/* .top-nav{
+    height: 140px;
+} */
+
+.heading{
+    font-size: 1.2rem;
+}
+
+    
+.intro-info-title{
+    font-size: 2rem;
+}
+
+.btn-style{
+    font-size: 0.9rem;
+}
+    
+}
+
+@media screen and (min-width: 768px){
+
+    .heading{
+        font-size: 1.2rem ;
+    }
+
+    .intro-info-title{
+        font-size: 2.2rem;
+    }
+    
+    .intro-info-short{
+        font-size: 1rem;
+    }
+
+    .text-content {
+        font-size: 1rem;
+    }
+    
+    .nav-item{
+        padding: 0px 25px 5px 0;
+        font-size: 0.9rem;
+
+    } 
+
+    .chart-4-heading {
+        margin-left: 16.5vw;
+    }
+
+    }
+
+ @media screen and (min-width: 992px){
+
+    .nav-item{
+        padding: 0px 40px 5px 0;
+        font-size: 0.9rem;
+
+    } 
+
+    .text-format {
+        column-count: 1;
+    }
+
+    .btn-style{
+        font-size: 1rem;
+    }
+} 
+
+
