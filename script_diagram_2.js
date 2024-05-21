@@ -84,7 +84,6 @@ fetch(request)
     });
     console.log(summa);
 
-
     // referens: https://stackoverflow.com/questions/74712508/javascript-sum-of-two-numbers-inside-an-array-print-index-of-numbers-whoose-sum
     // och: https://www.w3schools.com/jsref/jsref_parsefloat.asp
 
@@ -114,15 +113,16 @@ fetch(request)
 
     const datasets = [
       {
-        label: "Total utsläpp",
-        data: values,
-        fill: "origin",
-        backgroundColor: "#F39EBa7a",
-      },
-      {
         label: "Utsläpp kläder/skor",
         data: values2,
         fill: "origin",
+        backgroundColor: "#745d42e1",
+      },
+      {
+        label: "Total utsläpp",
+        data: values,
+        fill: "origin",
+        backgroundColor: "#79c7b74a",
       },
     ];
 
@@ -138,6 +138,16 @@ fetch(request)
     const config = {
       type: "line",
       data,
+      options: {
+        scales: {
+          y: {
+            title: {
+              display: true,
+              text: "Ton",
+            },
+          },
+        },
+      },
     };
 
     //hämtar canvaselement med id diagram 2

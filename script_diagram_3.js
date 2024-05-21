@@ -134,14 +134,13 @@ fetch(request)
           y: {
             title: {
               display: true,
-              text: "Mängd (ton)",
+              text: "Ton",
             },
             stacked: true,
           },
         },
 
-        
-       /*  scales: {
+        /*  scales: {
           x: {
             display: true,
           },
@@ -151,7 +150,6 @@ fetch(request)
           }
         }
          */
-
       },
     };
 

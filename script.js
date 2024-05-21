@@ -96,11 +96,44 @@ fetch(request)
 
     console.log(data);
 
+    const annotation1 = {
+      type: "line",
+      borderColor: "green",
+      borderDash: [6, 6],
+      borderWidth: 1,
+      xMax: 5,
+      xMin: 5,
+      xScaleID: "x",
+      yMax: 0,
+      yMin: 17000,
+      yScaleID: "y",
+    };
+
+    const annotation2 = {
+      type: "line",
+      borderColor: "green",
+      borderDash: [6, 6],
+      borderWidth: 1,
+      xMax: 8,
+      xMin: 8,
+      xScaleID: "x",
+      yMax: 0,
+      yMin: 17000,
+      yScaleID: "y",
+    };
+
     const config = {
       type: "line",
       data,
       options: {
         plugins: {
+          annotation: {
+            annotations: {
+              annotation1,
+              annotation2,
+            },
+          },
+
           legend: {
             display: false,
           },
@@ -109,8 +142,9 @@ fetch(request)
           y: {
             title: {
               display: true,
-              text: "Mängd (ton)",
+              text: "Ton",
             },
+            min: 14500,
           },
         },
       },
