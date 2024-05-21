@@ -139,6 +139,19 @@ fetch(request)
             stacked: true,
           },
         },
+
+        
+       /*  scales: {
+          x: {
+            display: true,
+          },
+          y: {
+            display: true,
+            type: 'logarithmic',
+          }
+        }
+         */
+
       },
     };
 
