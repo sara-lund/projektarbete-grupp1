@@ -45,12 +45,6 @@ const testQuery = {
   },
 };
 
-/* Markerar linje, där segmentpunkten är större än 4 och mindre än 8. Färg på 
-linje utanför intervallet bestäms av value. */
-
-const color = (ctx, value) =>
-  ctx.p0DataIndex > 4 && ctx.p0DataIndex < 8 ? value : "#C1C1C1";
-
 // Post request som sedan skickas med fetch
 const request = new Request(testDataUrl, {
   method: "POST",
@@ -78,14 +72,11 @@ fetch(request)
     const datasets = [
       {
         data: values,
-        backgroundColor: "#F39EBB",
-        //pointRadius: 0,
-        segment: {
-          borderColor: (ctx) => color(ctx, "black"),
-        },
+        pointRadius: 0,
+        borderWidth: 0,
         tension: 0.4,
-        pointBackgroundColor: "black",
-        pointBorderColor: "black",
+        fill: 'origin',
+        backgroundColor: '#8fbabf50',
       },
     ];
 
@@ -98,28 +89,24 @@ fetch(request)
 
     const annotation1 = {
       type: "line",
-      borderColor: "green",
+      borderColor: "#1e424a",
       borderDash: [6, 6],
       borderWidth: 1,
       xMax: 5,
       xMin: 5,
-      xScaleID: "x",
       yMax: 0,
-      yMin: 17000,
-      yScaleID: "y",
+      yMin: 17500,
     };
 
     const annotation2 = {
       type: "line",
-      borderColor: "green",
+      borderColor: "#1e424a",
       borderDash: [6, 6],
       borderWidth: 1,
       xMax: 8,
       xMin: 8,
-      xScaleID: "x",
       yMax: 0,
-      yMin: 17000,
-      yScaleID: "y",
+      yMin: 17500,
     };
 
     const config = {
@@ -145,6 +132,7 @@ fetch(request)
               text: "Ton",
             },
             min: 14500,
+            max: 17500, 
           },
         },
       },
