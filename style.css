@@ -38,12 +38,13 @@ body{
 }
 
 .test-row-cards{
-    margin: 2% 0 0 5%;
-
+    display: flex;
+    justify-content: space-around;
 }
 
 .card{
     border-radius: 10px;
+    width: 5rem;
 }
 
 .card-img-top{
