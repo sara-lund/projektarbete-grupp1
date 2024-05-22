@@ -39,12 +39,12 @@ body{
 
 .test-row-cards{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card{
     border-radius: 10px;
-    width: 5rem;
 }
 
 .card-img-top{
@@ -404,6 +404,10 @@ canvas{
 
     .btn-style{
         font-size: 1rem;
+    }
+
+    .test-row-cards{
+        margin: 0 50px 0 50px;
     }
 } 
 
