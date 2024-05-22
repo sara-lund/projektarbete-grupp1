@@ -45,12 +45,11 @@ body{
 
 .card-body-style{
     background-color: #EEF8FA;
-}
-
-.card-link{
+    
     display: flex;
     justify-content: space-between;
 }
+
 .card-title-style{
     font-weight: 600;
     color: white;
