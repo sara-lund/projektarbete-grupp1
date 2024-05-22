@@ -32,16 +32,54 @@ body{
     align-items: center;
 }
 
+.intro-info-title{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 150px;
+   /* background-image: url(cover_image.jpg); */
+}
+
+.card-body-style{
+    background-color: #EEF8FA;
+}
+
+.card-link{
+    display: flex;
+    justify-content: space-between;
+}
+.card-title-style{
+    font-weight: 600;
+    color: white;
+    padding: 20px 0px 0px 25px;
+    width: 75%;
+}
+
+.card:nth-child(1) .card-img-top{
+    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+}
+
+.card:nth-child(2) .card-img-top{
+    background-image: url(athanasios-papazacharias-boat-unsplash.jpg);
+}
+
+.card:nth-child(3) .card-img-top{
+    background-image: url(ella-ivanescu-factory-unsplash.jpg);
+}
+
+.card:nth-child(4) .card-img-top{
+    background-image: url(dan-meyers-field-unsplash.jpg);
+}
+
 .intro-info{
     color: white;
     width: 40%;
     padding: 15px;
     border-radius: 15px;
     margin-left: 5%;
-}
-
-.intro-info-title{
-    font-weight: 900;
 }
 
 .nav-item{
@@ -110,15 +148,6 @@ a:link, a:visited{
 
 .text-test{
     margin: 5%;
-}
-
-.intro-info-title{
-    font-weight: 700;
-}
-
-
-.intro-info-title{
-    font-size: 2.4rem;
 }
 
 .heading{
