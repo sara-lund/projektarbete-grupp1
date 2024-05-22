@@ -22,7 +22,7 @@ body{
 
 .main-bg-img{
     width: 100%;
-    height: 80vh;
+    height: 50vh;
     background-image: url(test-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
@@ -66,24 +66,23 @@ a:link, a:visited{
 }
 
 .menu-hover{
-    border: none;
+    border-bottom: solid 2px rgb(0, 0, 0, 0);
     transition: all 0.1s;
 }
 
 
 .active{
-    border: none;
+    border-bottom: solid 2px black;
     font-weight: bold;
     pointer-events: none;
 }
 
 
 .menu-hover:hover{
-    border: none;
+    border-bottom: solid 2px rgb(0, 0, 0, 0.5);
     font-weight: bold;
     transition: all 0.1s;
     color: rgb(0, 0, 0, 0.5);
-}
 }
 
 .shadow-effect{
@@ -92,15 +91,25 @@ a:link, a:visited{
 
 .main-bg-test{
     min-height: 100vh;
-    background-color:#e1eeef;
+    background-color:white;
     margin: 0;
     padding: 0;
+}
+
+.bottom-header{
+    background-color: #8FBABF;
+    height: 50px ;
+    width: 100%;
 }
 
 /* test */
 .col{
     margin: 0;
     padding: 0;
+}
+
+.text-test{
+    margin: 5%;
 }
 
 .intro-info-title{
@@ -201,6 +210,7 @@ ul{
 i{
     transform: translateY(10%);
     font-size: 25px;
+    color: #745d42e1
 }
 
 
@@ -209,23 +219,13 @@ i{
     font-size: 18px;
     margin-left: 10px;
 }
-
-.example-graph{
-    padding: 30%;
-    background-color: lightgray;
-}
-
 .text-format{
-    column-count: 1;
+    column-count: 2;
 }
 
-.heading-chart{
-    padding-top: 10%;
-}
-
+/* Ha margin-left för rubriken för diagram 4 eller inte? */
 .chart-4-heading {
     margin-left: 12vw;
-    padding-top: 6.5%;
 }
 
 canvas{
@@ -270,6 +270,10 @@ canvas{
         font-size: 0.9rem;
     }
 
+    .text-format {
+        column-count: 1;
+    }
+
     .chart-4-heading {
         margin-left: 8vw;
     }
@@ -289,6 +293,7 @@ canvas{
 
 .heading{
     font-size: 1.2rem;
+    color: #483a2ed5;
 }
 
     
@@ -298,10 +303,6 @@ canvas{
 
 .btn-style{
     font-size: 0.9rem;
-}
-
-.chart-4-heading {
-    margin-left: 12vw;
 }
     
 }
@@ -334,26 +335,6 @@ canvas{
         margin-left: 16.5vw;
     }
 
-    .menu-hover{
-        border-bottom: solid 2px rgb(0, 0, 0, 0);
-        transition: all 0.1s;
-    }
-    
-    
-    .active{
-        border-bottom: solid 2px black;
-        font-weight: bold;
-        pointer-events: none;
-    }
-    
-    
-    .menu-hover:hover{
-        border-bottom: solid 2px rgb(0, 0, 0, 0.5);
-        font-weight: bold;
-        transition: all 0.1s;
-        color: rgb(0, 0, 0, 0.5);
-    }
-
     }
 
  @media screen and (min-width: 992px){
@@ -365,7 +346,7 @@ canvas{
     } 
 
     .text-format {
-        column-count: 2;
+        column-count: 1;
     }
 
     .btn-style{
