@@ -37,17 +37,37 @@ body{
     font-weight: 700;
 }
 
+.test-row-cards{
+    margin: 2% 0 0 5%;
+
+}
+
+.card{
+    border-radius: 10px;
+}
+
 .card-img-top{
     width: 100%;
-    height: 150px;
+    height: 140px;
    /* background-image: url(cover_image.jpg); */
+   border-radius: 10px 10px 0 0;
+   background-size: cover;
+   background-blend-mode: darken;
+   background-color: rgba(0, 0, 0, 0.45);
 }
 
 .card-body-style{
     background-color: #EEF8FA;
-    
     display: flex;
     justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    /* font-weight: 500; */
+}
+
+.cards-main-title{
+    margin: 5% 0 0 5%;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .card-title-style{
@@ -55,10 +75,14 @@ body{
     color: white;
     padding: 20px 0px 0px 25px;
     width: 75%;
+    font-size: 17px;
+    
+    line-height: 1.35;
 }
 
 .card:nth-child(1) .card-img-top{
     background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    
 }
 
 .card:nth-child(2) .card-img-top{
