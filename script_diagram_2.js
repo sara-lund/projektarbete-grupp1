@@ -1,8 +1,8 @@
 // Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
-const urlSCB =
+const urlSCB2 =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI1301/MI1301F/MI1301MPCOICOPN";
 
-querySCB = {
+querySCB2 = {
   query: [
     {
       code: "Uppkomst",
@@ -50,94 +50,94 @@ querySCB = {
   },
 };
 
-const request = new Request(urlSCB, {
+const request2 = new Request(urlSCB2, {
   method: "POST",
-  body: JSON.stringify(querySCB),
+  body: JSON.stringify(querySCB2),
 });
 
-fetch(request)
-  .then((response) => response.json())
-  .then((SCBdata) => {
-    console.log(SCBdata);
+fetch(request2)
+  .then((response2) => response2.json())
+  .then((SCBdata2) => {
+    console.log(SCBdata2);
 
     // Hämta ut årtalen
-    const labelsRaw = SCBdata.data.map((label) => label.key[3]);
+    const labelsRaw2 = SCBdata2.data.map((label2) => label2.key[3]);
 
     // Kombinerar dubletter av årtal till ett enda årtal
-    const labels = [...new Set(labelsRaw)];
-    console.log("Årtal", labels);
+    const labels2 = [...new Set(labelsRaw2)];
+    console.log("Årtal", labels2);
 
-    const valuesRaw = SCBdata.data.map((value) => value.values[0]);
-    console.log("Råa värden", valuesRaw);
+    const valuesRaw2 = SCBdata2.data.map((value2) => value2.values[0]);
+    console.log("Råa värden", valuesRaw2);
 
-    const sumYear = [...new Set(labelsRaw)];
-    console.log(sumYear);
+    const sumYear2 = [...new Set(labelsRaw2)];
+    console.log(sumYear2);
 
     // tom array att använda för summan
-    let summa = [];
-    let summa2 = [];
+    let summa_2 = [];
+    let summa2_2 = [];
 
     // summa för varje år tilldelas värde 0
-    labels.forEach((label) => {
-      summa[label] = 0;
-      summa2[label] = 0;
+    labels2.forEach((label2) => {
+      summa_2[label2] = 0;
+      summa2_2[label2] = 0;
     });
-    console.log(summa);
+    console.log(summa_2);
 
     // referens: https://stackoverflow.com/questions/74712508/javascript-sum-of-two-numbers-inside-an-array-print-index-of-numbers-whoose-sum
     // och: https://www.w3schools.com/jsref/jsref_parsefloat.asp
 
     // loop för att summera mängd/år
-    for (let i = 0; i < SCBdata.data.length; i++) {
-      const label = SCBdata.data[i].key[3];
-      const value = parseFloat(SCBdata.data[i].values[0]);
+    for (let i = 0; i < SCBdata2.data.length; i++) {
+      const label2 = SCBdata2.data[i].key[3];
+      const value2 = parseFloat(SCBdata2.data[i].values[0]);
 
       // summan för varje år, label, sparas ner
-      summa[label] += value;
+      summa_2[label2] += value2;
 
-      if (SCBdata.data[i].key[2] === "4") {
-        const label = SCBdata.data[i].key[3];
-        const value = parseFloat(SCBdata.data[i].values[0]);
+      if (SCBdata2.data[i].key[2] === "4") {
+        const label2 = SCBdata2.data[i].key[3];
+        const value2 = parseFloat(SCBdata2.data[i].values[0]);
 
         // summan för varje år, label, sparas ner
-        summa2[label] += value;
+        summa2_2[label2] += value2;
       }
     }
-    console.log("Summa för respektive år: ", summa);
-    console.log("Summa (kläder & skor) för respektive år: ", summa2);
+    console.log("Summa för respektive år: ", summa_2);
+    console.log("Summa (kläder & skor) för respektive år: ", summa2_2);
 
     // Skapar en array med värden och årtal
-    const values = sumYear.map((label) => summa[label]);
-    const values2 = sumYear.map((label) => summa2[label]);
-    console.log(values);
+    const values_2 = sumYear2.map((label2) => summa_2[label2]);
+    const values2_2 = sumYear2.map((label2) => summa2_2[label2]);
+    console.log(values_2);
 
-    const datasets = [
+    const datasets2 = [
       {
         label: "Utsläpp kläder/skor",
-        data: values2,
+        data: values2_2,
         fill: "origin",
         backgroundColor: "#745d42e1",
       },
       {
         label: "Total utsläpp",
-        data: values,
+        data: values_2,
         fill: "origin",
         backgroundColor: "#79c7b74a",
       },
     ];
 
-    console.log(datasets);
+    console.log(datasets2);
 
-    const data = {
-      labels,
-      datasets,
+    const data2 = {
+      labels: labels2,
+      datasets: datasets2,
     };
 
-    console.log(data);
+    console.log(data2);
 
-    const config = {
+    const config2 = {
       type: "line",
-      data,
+      data: data2,
       options: {
         scales: {
           y: {
@@ -151,6 +151,6 @@ fetch(request)
     };
 
     //hämtar canvaselement med id diagram 2
-    const canvas = document.getElementById("diagram2");
-    const testing = new Chart(canvas, config);
+    const canvas2 = document.getElementById("diagram2");
+    const testing = new Chart(canvas2, config2);
   });

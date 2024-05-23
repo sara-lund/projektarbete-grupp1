@@ -297,16 +297,26 @@ canvas{
 }
 
 
-.test-link{
+.back-link{
     width: 100%;
     padding: 20px 0 20px 30px;
 }
+
 
 .fa-arrow-left{
     margin-right: 5px;
     font-size: 14px;
     transform: translateY(2%);
     color: black;
+}
+
+.link-text:hover {
+    text-decoration: none;
+    color: #8FBABF;
+
+    .fa-arrow-left{
+        color: #8FBABF;
+    }
 }
 
 .bg-img-intro{
@@ -321,11 +331,30 @@ canvas{
     justify-content: center;
     background-color: #8FBABF;
     color: white;
+    padding-left: 50px;
 }
 
 .banner-title h1{
     font-weight: 700;
-    padding-bottom: 25px;
+    padding-bottom:15px;
+}
+
+.source-box{
+    margin-top: 10%;
+    background-color: #e4f1f2;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+.source-box p{
+    margin-bottom: 30px;
+}
+
+.source-box h3{
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /* Media queries */
@@ -438,6 +467,7 @@ canvas{
     .test-row-cards{
         margin: 0 50px 0 50px;
     }
+    
 } 
 
 
