@@ -412,7 +412,6 @@ i{
 
 .heading{
     font-size: 1.2rem;
-    color: #483a2ed5;
 }
 
     
@@ -464,6 +463,10 @@ i{
     
 .card-container .card{
     flex-basis: calc(50% - 20px);
+}
+
+.card-container-3 .card{
+    flex-basis: calc((1/3) - 20px);
 }
     .nav-item{
         padding: 0px 40px 5px 0;
