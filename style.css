@@ -290,6 +290,9 @@ i{
     margin-bottom: 20px;
 }
 
+.fa{
+    color: black;
+}
 
 .back-link{
     width: 100%;
@@ -314,8 +317,14 @@ i{
 }
 
 .bg-img-intro{
-    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
     height: 300px;
+    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    background-size: cover;
+}
+
+.bg-img-intro-export{
+    height: 300px;
+    background-image: url(ella-ivanescu-factory-unsplash.jpg);
     background-size: cover;
 }
 
@@ -334,7 +343,7 @@ i{
 }
 
 .source-box{
-    margin-top: 10%;
+    margin: 5% 0 7% 0;
     background-color: #e4f1f2;
     width: 100%;
     padding: 20px;

@@ -88,7 +88,7 @@
           </a>
         </div>
         <div class="row banner-img">
-          <div class="col-5 bg-img-intro"></div>
+          <div class="col-5 bg-img-intro-export"></div>
           <div class="col-7 banner-title">
             <h1>Utsläpp över tid</h1>
             <p>En överblick över växthusgasutsläpp mellan år 2013-2022</p>
@@ -100,15 +100,18 @@
           Hur ser klädkonsumtionen ut i export och import under 2018-2021?
         </h4>
 
+        <!-- row diagram -->
         <div class="row justify-content-center section-margin">
           <!-- <div class="col-7 col-sm-9 col-md-8 col-lg-12 text-test"></div> -->
 
           <div class="col-10 col-sm-9 col-md-8 col-lg-4">
             <canvas id="diagram4-1" class="chart-spacing"></canvas>
           </div>
+
           <div class="col-10 col-sm-9 col-md-8 col-lg-4">
             <canvas id="diagram4-2"></canvas>
           </div>
+
           <p class="col-10 col-sm-9 col-md-8 col-lg-8 text-format text-content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quos
             provident dolorum quidem quisquam voluptatibus! Officiis voluptate
@@ -151,35 +154,47 @@
               </a>
             </p>
           </div>
-          <div class="row justify-content-center">
-            <div class="row col-8 justify-content-center card-container test-row-cards">
-                <div class="card col-9 col-sm-12 col-md col-lg p-0 shadow-effect">
-                  <a href="diagram_3.html" class="card-link">
-                    <div class="card-img-top" alt="...">
-                      <h5 class="card-title card-title-style">Vilken växthusgas har störst utsläpp?</h5>
-                    </div>
-                    <div class="card-body card-body-style">
-                        Läs mer
-                        <i class="fa fa-solid fa-arrow-right"></i>
-                    </div>
-                  </a>
-                </div>
-              
-              <div class="card col-9 col-sm-12 col-md col-lg p-0 shadow-effect">
-                <a href="diagram_4.html" class="card-link">
+          
+
+        </div>
+        <!-- end diagram -->
+
+        <!-- cards start -->
+        <div class="row justify-content-center">
+          <h3 class="heading col-8">Utforska mer</h3>
+          <div class="row col-8 justify-content-center card-container test-row-cards">
+
+            <!-- card 1  -->
+            <div class="card col-9 col-sm-12 col-md col-lg p-0 shadow-effect">
+                <a href="diagram_3.html" class="card-link">
                   <div class="card-img-top" alt="...">
-                    <h5 class="card-title card-title-style">Hur ser utsläppen av växthusgaser ut över tid?</h5>
+                    <h5 class="card-title card-title-style">Vilken växthusgas har störst utsläpp?</h5>
                   </div>
                   <div class="card-body card-body-style">
                     Läs mer
-                      <i class="fa fa-solid fa-arrow-right"></i>
+                    <i class="fa fa-solid fa-arrow-right"></i>
                   </div>
                 </a>
               </div>
+            
+            <!-- card 2 -->
+            <div class="card col-9 col-sm-12 col-md col-lg p-0 shadow-effect">
+              <a href="diagram_4.html" class="card-link">
+                <div class="card-img-top" alt="...">
+                  <h5 class="card-title card-title-style">Hur ser utsläppen av växthusgaser ut över tid?</h5>
+                </div>
+                <div class="card-body card-body-style">
+                  Läs mer
+                  <i class="fa fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
             </div>
+
           </div>
         </div>
+        <!-- end cards -->
       </div>
+      <!-- end container fluid -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
