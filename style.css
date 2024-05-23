@@ -296,6 +296,38 @@ canvas{
     margin-bottom: 20px;
 }
 
+
+.test-link{
+    width: 100%;
+    padding: 20px 0 20px 30px;
+}
+
+.fa-arrow-left{
+    margin-right: 5px;
+    font-size: 14px;
+    transform: translateY(2%);
+    color: black;
+}
+
+.bg-img-intro{
+    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    height: 300px;
+    background-size: cover;
+}
+
+.banner-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8FBABF;
+    color: white;
+}
+
+.banner-title h1{
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
 /* Media queries */
 @media screen and (max-width: 576px ){
 
@@ -323,7 +355,7 @@ canvas{
     .btn-style{
         font-size: 0.9rem;
     }
-    
+
     .chart-4-heading {
         margin-left: 8vw;
     }
