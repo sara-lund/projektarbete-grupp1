@@ -152,7 +152,7 @@ a:link, a:visited{
 }
 
 .main-bg-test{
-    min-height: 100vh;
+    min-height: 120vh;
     background-color:white;
     margin: 0;
     padding: 0;
