@@ -272,8 +272,9 @@ i{
     font-size: 18px;
     margin-left: 10px;
 }
+
 .text-format{
-    column-count: 2;
+    column-count: 1;
 }
 
 /* Ha margin-left för rubriken för diagram 4 eller inte? */
@@ -322,11 +323,7 @@ canvas{
     .btn-style{
         font-size: 0.9rem;
     }
-
-    .text-format {
-        column-count: 1;
-    }
-
+    
     .chart-4-heading {
         margin-left: 8vw;
     }
@@ -399,7 +396,7 @@ canvas{
     } 
 
     .text-format {
-        column-count: 1;
+        column-count: 2;
     }
 
     .btn-style{
