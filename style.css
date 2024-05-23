@@ -87,15 +87,15 @@ body{
 }
 
 .card:nth-child(2) .card-img-top{
-    background-image: url(athanasios-papazacharias-boat-unsplash.jpg);
-}
-
-.card:nth-child(3) .card-img-top{
     background-image: url(ella-ivanescu-factory-unsplash.jpg);
 }
 
-.card:nth-child(4) .card-img-top{
+.card:nth-child(3) .card-img-top{
     background-image: url(dan-meyers-field-unsplash.jpg);
+}
+
+.card:nth-child(4) .card-img-top{
+    background-image: url(athanasios-papazacharias-boat-unsplash.jpg);
 }
 
 .intro-info{
@@ -280,12 +280,6 @@ i{
 /* Ha margin-left för rubriken för diagram 4 eller inte? */
 .chart-4-heading {
     margin-left: 12vw;
-}
-
-canvas{
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
 }
 
 .accordion-body{
