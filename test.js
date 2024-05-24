@@ -1,3 +1,8 @@
+/* 
+
+INAKTIV KOD - TA BORT?
+
+
 // Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
 
 // test för två dataset
@@ -65,13 +70,14 @@ fetch(request)
 
     console.log("borlänge", dataBorl, "falun: ", dataFalun);
 
-    /* 
+    
   //formatera data som chart.js vill ha det
-  const values = scbData.data.map((value) => value.values[0]);
-  console.log('värden:', values);
+  // const values = scbData.data.map((value) => value.values[0]);
+  // console.log('värden:', values);
 
-  const labels = scbData.data.map((value) => value.key[1]);
-  console.log('etiketter', labels); */
+  // const labels = scbData.data.map((value) => value.key[1]);
+  // console.log('etiketter', labels); 
+
     //lägg in i diagram
 
     const datasets = [
@@ -105,3 +111,5 @@ fetch(request)
     const canvas = document.getElementById("scbtest");
     const testing = new Chart(canvas, config);
   });
+
+ */
