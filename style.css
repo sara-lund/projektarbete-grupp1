@@ -1,5 +1,7 @@
 /* Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu) */
 
+
+/* generella inställningar för sidan */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +9,15 @@
     font-family: 'Inter';
 }
 
+:root{
+    --lightblue: #EEF8FA;
+}
+
+/*
+
 body{
     width: 100%;
-}
+} 
 
 .top-nav{
     background-image: url(cover_image.jpg);
@@ -17,38 +25,54 @@ body{
     height: 90px;
     background-size:cover;
     background-color: rgb(150 43 86);
-}
+} 
+
+*/
 
 
+/* bakgrundsbild på indexsidan */
 .main-bg-img{
-    width: 100%;
+    /* width: 100%; */
     height: 50vh;
     background-image: url(test-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
     background-size: cover;
-    margin: 0;
+    /* margin: 0; */
     display: flex;
     align-items: center;
 }
 
+/* placering av titeln på bakgrundsbilden, indexsidan*/
+.intro-info{
+    color: white;
+    width: 40%;
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
+/* titel på indexsidan */
 .intro-info-title{
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* påverkar inte, ändras nere i brytpunkterna, ta bort? */
     font-weight: 700;
 }
 
+/* utseende på row med cards */
 .test-row-cards{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+/* runda hörn på cards */
 .card{
     border-radius: 10px;
 }
 
+/* förutsättningar för bilden i cardsen, indexsidan */
 .card-img-top{
-    width: 100%;
+    /* width: 100%; */
     height: 140px;
    /* background-image: url(cover_image.jpg); */
    border-radius: 10px 10px 0 0;
@@ -57,33 +81,9 @@ body{
    background-color: rgba(0, 0, 0, 0.45);
 }
 
-.card-body-style{
-    background-color: #EEF8FA;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 0 0 10px 10px;
-    /* font-weight: 500; */
-}
-
-.cards-main-title{
-    margin: 5% 0 0 5%;
-    font-size: 20px;
-    font-weight: 900;
-}
-
-.card-title-style{
-    font-weight: 600;
-    color: white;
-    padding: 20px 0px 0px 25px;
-    width: 75%;
-    font-size: 17px;
-    
-    line-height: 1.35;
-}
-
+/* bilder till respektive card på indexsidan */
 .card:nth-child(1) .card-img-top{
     background-image: url(alejo-reinoso-clothes-unsplash.jpg);
-    
 }
 
 .card:nth-child(2) .card-img-top{
@@ -98,30 +98,47 @@ body{
     background-image: url(athanasios-papazacharias-boat-unsplash.jpg);
 }
 
-.intro-info{
-    color: white;
-    width: 40%;
-    padding: 15px;
-    border-radius: 15px;
-    margin-left: 5%;
+/* utseende på utforska-titeln över cardsen */
+.cards-main-title{
+    margin: 5% 0 0 5%;
+    font-size: 20px;
+    font-weight: 900;
 }
+
+/* utseende på titel innuti cardsen */
+.card-title-style{
+    font-weight: 600;
+    color: white;
+    padding: 20px 0px 0px 25px;
+    width: 75%;
+    font-size: 17px;
+    line-height: 1.35;
+}
+
+/* innehåll i cards */
+.card-body-style{
+    background-color: var(--lightblue);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    /* font-weight: 500; */
+}
+
+/* 
 
 .nav-item{
     padding: 0 50px 5px 0;
     white-space: nowrap;
-}
+} 
 
 .nav-item:last-child{
     padding-right: 0px;
 }
 
-/*padding på menyn -- fråga mikaela*/
-/*
 .nav-item>.nav-link{
     padding: 0 0 2px 0;
 }
-*/
-
 
 a:link, a:visited{
     color: black;
@@ -147,6 +164,8 @@ a:link, a:visited{
     color: rgb(0, 0, 0, 0.5);
 }
 
+*/
+
 .shadow-effect{
     box-shadow: 0px 3px 3px #4242423d;
 }
@@ -158,6 +177,7 @@ a:link, a:visited{
     padding: 0;
 }
 
+/* linje under background-image, indexsidan */
 .bottom-header{
     background-color: #8FBABF;
     height: 50px ;
@@ -192,6 +212,7 @@ ul{
     padding-left: 15px;
 }
 
+/*
 
 .accordion-btn-style{
     width: 100%;
@@ -220,7 +241,7 @@ ul{
     display: flex;
     justify-items: center;
     align-items: center;
-}
+} 
 
 .navbar-toggler-icon .fa{
     justify-items: center;
@@ -239,12 +260,15 @@ ul{
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-}
+} 
+
+
 
 .btn-style:hover{
     background-color: lightgrey;
 }
 
+*/
 
 .testt:hover{
     text-decoration: none;
@@ -344,7 +368,7 @@ i{
 
 .source-box{
     margin: 5% 0 7% 0;
-    background-color: #e4f1f2;
+    background-color: var(--lightblue);
     width: 100%;
     padding: 20px;
     border-radius: 10px;
