@@ -143,13 +143,11 @@ body{
 
 /* 
 
-/* Hör till föredetta navigationen*/
 .nav-item{
     padding: 0 50px 5px 0;
     white-space: nowrap;
 } 
 
-/* Hör till föredetta navigationen*/
 .nav-item:last-child{
     padding-right: 0px;
 }
@@ -158,24 +156,18 @@ body{
     padding: 0 0 2px 0;
 }
 
-a:link, a:visited{
-    color: black;
-}
 
-/* Hör till föredetta navigationen*/
 .menu-hover{
     border-bottom: solid 2px rgb(0, 0, 0, 0);
     transition: all 0.1s;
 }
 
-/* Hör till föredetta navigationen*/
 .active{
     border-bottom: solid 2px black;
     font-weight: bold;
     pointer-events: none;
 }
 
-/* Hör till föredetta navigationen*/
 .menu-hover:hover{
     border-bottom: solid 2px rgb(0, 0, 0, 0.5);
     font-weight: bold;
@@ -183,7 +175,7 @@ a:link, a:visited{
     color: rgb(0, 0, 0, 0.5);
 }
 
-*/
+ */
 
 .shadow-effect{
     box-shadow: 0px 3px 3px #4242423d;
@@ -216,10 +208,7 @@ a:link, a:visited{
 .heading{
     font-weight: 700;
     font-size:x-large;
-    padding-top: 35px;
-}
-
-.heading-chart{
+    margin-top: 120px;
     margin-bottom: 30px;
 }
 
@@ -231,7 +220,7 @@ ul{
     padding-left: 15px;
 }
 
-
+/*
 .accordion-btn-style{
     width: 100%;
     font-size: 16px;
@@ -245,7 +234,6 @@ ul{
     margin-top: 15px;
 }
 
-/* Hör till föredetta referens designen*/
 .accordion-body{
     background-color: white;
     padding: 15px;
@@ -256,14 +244,12 @@ ul{
     border-radius: 0 0 5px 5px;
 }
 
-/* Hör till föredetta referens designen*/
 .navbar-toggler{
     display: flex;
     justify-items: center;
     align-items: center;
 } 
 
-/* Hör till föredetta referens designen*/
 .navbar-toggler-icon .fa{
     justify-items: center;
     align-items: center;
@@ -282,8 +268,6 @@ ul{
     justify-content: space-between;
     margin-top: 15px;
 } 
-
-
 
 .btn-style:hover{
     background-color: lightgrey;
@@ -342,8 +326,12 @@ i{
 .back-link{
     width: 100%;
     padding: 20px 0 20px 30px;
+    color: black;
 }
 
+a:link, a:visited{
+    color: black;
+}
 
 .fa-arrow-left{
     margin-right: 5px;
@@ -384,7 +372,7 @@ i{
 }
 
 .source-box{
-    margin: 5% 0 7% 0;
+    margin: 5% 0 0 0;
     background-color: var(--lightblue);
     width: 100%;
     padding: 20px;
@@ -443,46 +431,51 @@ i{
     }
 
     /*
-.card-container .card{
+    .card-container .card{
     flex-basis: calc(50% - 20px);
-    
-} */
+    } 
+    */
 }
 
 
 @media screen and (min-width: 576px ){
 
+    .text-content {
+        font-size: 0.9rem;
+    }
 
-.text-content {
-    font-size: 0.9rem;
-}
-
-/* .top-nav{
+    /* 
+    .top-nav{
     height: 140px;
-} */
+    }
 
-.heading{
-    font-size: 1.2rem;
-}
+    */
 
-    
-.intro-info-title{
-    font-size: 2rem;
-}
+    .heading{
+        font-size: 1.2rem;
+    }
 
-.btn-style{
-    font-size: 0.9rem;
-}
+        
+    .intro-info-title{
+        font-size: 2rem;
+    }
 
-.card-container{
-    gap: 20px;
-}
+    .btn-style{
+        font-size: 0.9rem;
+    }
 
-/*
-.card-container .card{
-    flex-basis: calc(50% - 20px);
-    
-} */
+    .card-container{
+        gap: 20px;
+    }
+
+    /*
+
+    .card-container .card{
+        flex-basis: calc(50% - 20px);
+        
+    } 
+
+    */
 
 }
 
@@ -518,30 +511,27 @@ i{
         gap: 20px;
     }
     
-    
     .card-container .card{
         flex-basis: calc(50% - 20px);
-
     }
 }
 
  @media screen and (min-width: 992px){
-    
-.card-container{
-    gap: 20px;
-}
-    
-.card-container .card{
-    flex-basis: calc(50% - 20px);
-}
+    .card-container{
+        gap: 20px;
+    }
+        
+    .card-container .card{
+        flex-basis: calc(50% - 20px);
+    }
 
-.card-container-3 .card{
-    flex-basis: calc((1/3) - 20px);
-}
+    .card-container-3 .card{
+        flex-basis: calc((1/3) - 20px);
+    }
+
     .nav-item{
         padding: 0px 40px 5px 0;
         font-size: 0.9rem;
-
     } 
 
     .text-format {
@@ -554,8 +544,5 @@ i{
 
     .test-row-cards{
         margin: 0 50px 0 50px;
-    }
-    
+    }  
 } 
-
-
