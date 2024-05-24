@@ -1,3 +1,8 @@
+/* 
+
+INAKTIV KOD - TA BORT?
+
+
 //hitta url
 const urlSCB =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HA/HA0201/HA0201B/ImpExpKNTotAr";
@@ -161,3 +166,5 @@ fetch(request)
     const testing3 = new Chart(canvas3, config3);
 
   });
+
+ */
