@@ -283,13 +283,15 @@ ul{
     margin-left: 15px;
 }
 
-
+/* placering av ikoner */
 i{
     transform: translateY(10%);
     font-size: 25px;
-    color: #745d42e1
 }
 
+.fa{
+    color: black;
+}
 
 .fa-arrow-right{
     transform: translateY(15%);
@@ -314,9 +316,6 @@ i{
     margin-bottom: 20px;
 }
 
-.fa{
-    color: black;
-}
 
 .back-link{
     width: 100%;
