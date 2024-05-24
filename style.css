@@ -106,20 +106,20 @@ body{
     line-height: 1.35;
 }
 
-.card:nth-child(1) .card-img-top{
+.img-1{
     background-image: url(Images/alejo-reinoso-clothes-unsplash.jpg);
     
 }
 
-.card:nth-child(2) .card-img-top{
+.img-2{
     background-image: url(Images/ella-ivanescu-factory-unsplash.jpg);
 }
 
-.card:nth-child(3) .card-img-top{
+.img-3{
     background-image: url(Images/dan-meyers-field-unsplash.jpg);
 }
 
-.card:nth-child(4) .card-img-top{
+.img-4{
     background-image: url(Images/athanasios-papazacharias-boat-unsplash.jpg);
 }
 
