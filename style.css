@@ -19,9 +19,9 @@ body{
     width: 100%;
 } 
 
-/* Ska tas bort*/
+
 .top-nav{
-    background-image: url(cover_image.jpg);
+    background-image: url(Images/cover_image.jpg);
     background-blend-mode: hard-light;
     height: 90px;
     background-size:cover;
@@ -35,7 +35,7 @@ body{
 .main-bg-img{
     /* width: 100%; */
     height: 50vh;
-    background-image: url(images/test-img.jpg);
+    background-image: url(Images/test-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
     background-size: cover;
@@ -107,20 +107,20 @@ body{
 }
 
 .card:nth-child(1) .card-img-top{
-    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    background-image: url(Images/alejo-reinoso-clothes-unsplash.jpg);
     
 }
 
 .card:nth-child(2) .card-img-top{
-    background-image: url(images/ella-ivanescu-factory-unsplash.jpg);
+    background-image: url(Images/ella-ivanescu-factory-unsplash.jpg);
 }
 
 .card:nth-child(3) .card-img-top{
-    background-image: url(images/dan-meyers-field-unsplash.jpg);
+    background-image: url(Images/dan-meyers-field-unsplash.jpg);
 }
 
 .card:nth-child(4) .card-img-top{
-    background-image: url(images/athanasios-papazacharias-boat-unsplash.jpg);
+    background-image: url(Images/athanasios-papazacharias-boat-unsplash.jpg);
 }
 
 .intro-info{
@@ -364,9 +364,8 @@ i{
 /* Göra en egen klass för endast height och background-size och bild klasserna ovan kan användas i kombination på elementet*/
 
 .bg-img-intro{
-    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    background-image: url(Images/alejo-reinoso-clothes-unsplash.jpg);
     height: 300px;
-    background-image: url(ella-ivanescu-factory-unsplash.jpg);
     background-size: cover;
 }
 
