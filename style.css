@@ -11,6 +11,7 @@ body{
     width: 100%;
 }
 
+/* Ska tas bort*/
 .top-nav{
     background-image: url(cover_image.jpg);
     background-blend-mode: hard-light;
@@ -19,11 +20,11 @@ body{
     background-color: rgb(150 43 86);
 }
 
-
+/* Skapa en klass med syfte att sätta blend-modes på bilder, slipper dubbletter av kod */
 .main-bg-img{
     width: 100%;
     height: 50vh;
-    background-image: url(test-img.jpg);
+    background-image: url(images/test-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
     background-size: cover;
@@ -51,7 +52,7 @@ body{
     width: 100%;
     height: 140px;
    /* background-image: url(cover_image.jpg); */
-   border-radius: 10px 10px 0 0;
+   border-radius: 10px 10px 0px 0px;
    background-size: cover;
    background-blend-mode: darken;
    background-color: rgba(0, 0, 0, 0.45);
@@ -61,12 +62,12 @@ body{
     background-color: #EEF8FA;
     display: flex;
     justify-content: space-between;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0px 0px 10px 10px;
     /* font-weight: 500; */
 }
 
 .cards-main-title{
-    margin: 5% 0 0 5%;
+    margin: 5% 0% 0% 5%;
     font-size: 20px;
     font-weight: 900;
 }
@@ -77,27 +78,30 @@ body{
     padding: 20px 0px 0px 25px;
     width: 75%;
     font-size: 17px;
-    
     line-height: 1.35;
 }
 
+/* Sätta specifika klassnamn för bilderna istället ? Slipper lägga till 
+fler klasser för att få till bilderna på diagram sidorna*/
+
 .card:nth-child(1) .card-img-top{
-    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    background-image: url(images/alejo-reinoso-clothes-unsplash.jpg);
     
 }
 
 .card:nth-child(2) .card-img-top{
-    background-image: url(ella-ivanescu-factory-unsplash.jpg);
+    background-image: url(images/ella-ivanescu-factory-unsplash.jpg);
 }
 
 .card:nth-child(3) .card-img-top{
-    background-image: url(dan-meyers-field-unsplash.jpg);
+    background-image: url(images/dan-meyers-field-unsplash.jpg);
 }
 
 .card:nth-child(4) .card-img-top{
-    background-image: url(athanasios-papazacharias-boat-unsplash.jpg);
+    background-image: url(images/athanasios-papazacharias-boat-unsplash.jpg);
 }
 
+/* Flytta upp till ovanför intro-info-title?*/
 .intro-info{
     color: white;
     width: 40%;
@@ -106,11 +110,13 @@ body{
     margin-left: 5%;
 }
 
+/* Hör till föredetta navigationen*/
 .nav-item{
     padding: 0 50px 5px 0;
     white-space: nowrap;
 }
 
+/* Hör till föredetta navigationen*/
 .nav-item:last-child{
     padding-right: 0px;
 }
@@ -127,19 +133,20 @@ a:link, a:visited{
     color: black;
 }
 
+/* Hör till föredetta navigationen*/
 .menu-hover{
     border-bottom: solid 2px rgb(0, 0, 0, 0);
     transition: all 0.1s;
 }
 
-
+/* Hör till föredetta navigationen*/
 .active{
     border-bottom: solid 2px black;
     font-weight: bold;
     pointer-events: none;
 }
 
-
+/* Hör till föredetta navigationen*/
 .menu-hover:hover{
     border-bottom: solid 2px rgb(0, 0, 0, 0.5);
     font-weight: bold;
@@ -154,7 +161,7 @@ a:link, a:visited{
 .main-bg-test{
     min-height: 120vh;
     background-color:white;
-    margin: 0;
+    margin: 0% 0% 5% 0%;
     padding: 0;
 }
 
@@ -192,7 +199,7 @@ ul{
     padding-left: 15px;
 }
 
-
+/* Hör till föredetta referens designen*/
 .accordion-btn-style{
     width: 100%;
     font-size: 16px;
@@ -206,6 +213,7 @@ ul{
     margin-top: 15px;
 }
 
+/* Hör till föredetta referens designen*/
 .accordion-body{
     background-color: white;
     padding: 15px;
@@ -216,12 +224,14 @@ ul{
     border-radius: 0 0 5px 5px;
 }
 
+/* Hör till föredetta referens designen*/
 .navbar-toggler{
     display: flex;
     justify-items: center;
     align-items: center;
 }
 
+/* Hör till föredetta referens designen*/
 .navbar-toggler-icon .fa{
     justify-items: center;
     align-items: center;
@@ -282,6 +292,7 @@ i{
     margin-left: 12vw;
 }
 
+/* Hör till föredetta referens designen*/
 .accordion-body{
     overflow-wrap: break-word;
 }
@@ -313,8 +324,17 @@ i{
     }
 }
 
+/* Göra en egen klass för endast height och background-size och bild klasserna ovan kan användas i kombination på elementet*/
+
 .bg-img-intro{
-    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
+    background-image: url(images/alejo-reinoso-clothes-unsplash.jpg);
+    height: 300px;
+    background-size: cover;
+}
+
+/* Ta bort sen?*/
+.bg-image-third{
+    background-image: url(images/dan-meyers-field-unsplash.jpg);
     height: 300px;
     background-size: cover;
 }
@@ -352,7 +372,7 @@ i{
 }
 
 .card-container{
-    gap: 20px 0;
+    gap: 20px 0px;
 }
 
 
@@ -387,6 +407,16 @@ i{
     .chart-4-heading {
         margin-left: 8vw;
     }
+
+    .card-container{
+        gap: 20px 0px;
+    }
+
+    /*
+.card-container .card{
+    flex-basis: calc(50% - 20px);
+    
+} */
 }
 
 
@@ -403,7 +433,6 @@ i{
 
 .heading{
     font-size: 1.2rem;
-    color: #483a2ed5;
 }
 
     
@@ -414,7 +443,17 @@ i{
 .btn-style{
     font-size: 0.9rem;
 }
+
+.card-container{
+    gap: 20px;
+}
+
+/*
+.card-container .card{
+    flex-basis: calc(50% - 20px);
     
+} */
+
 }
 
 @media screen and (min-width: 768px){
@@ -445,7 +484,16 @@ i{
         margin-left: 16.5vw;
     }
 
+    .card-container{
+        gap: 20px;
     }
+    
+    
+    .card-container .card{
+        flex-basis: calc(50% - 20px);
+
+    }
+}
 
  @media screen and (min-width: 992px){
     
