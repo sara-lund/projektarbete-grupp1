@@ -102,13 +102,11 @@ body{
     padding: 20px 0px 0px 25px;
     width: 75%;
     font-size: 17px;
-    
     line-height: 1.35;
 }
 
 .img-1{
     background-image: url(Images/alejo-reinoso-clothes-unsplash.jpg);
-    
 }
 
 .img-2{
@@ -352,7 +350,6 @@ a:link, a:visited{
 /* Göra en egen klass för endast height och background-size och bild klasserna ovan kan användas i kombination på elementet*/
 
 .bg-img-intro{
-    background-image: url(Images/alejo-reinoso-clothes-unsplash.jpg);
     height: 300px;
     background-size: cover;
 }
