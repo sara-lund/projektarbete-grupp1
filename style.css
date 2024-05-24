@@ -394,6 +394,15 @@ a:link, a:visited{
 /* Media queries */
 @media screen and (max-width: 576px ){
 
+    .banner-title{
+        height: 200px;
+        padding-right: 50px;
+        font-size: 15px;
+    }
+
+    .banner-title h1{
+        font-size: 2rem;
+    }
 
     .text-content {
         font-size: 0.9rem;
@@ -436,6 +445,17 @@ a:link, a:visited{
 
 
 @media screen and (min-width: 576px ){
+
+    .banner-title{
+        height: 200px;
+        padding-right: 50px;
+        font-size: 15px;
+    }
+
+    .banner-title h1{
+        font-size: 2.2rem;
+    }
+
 
     .text-content {
         font-size: 0.9rem;
@@ -482,6 +502,16 @@ a:link, a:visited{
         font-size: 1.2rem ;
     }
 
+    .banner-title{
+        height: 200px;
+        padding-right: 50px;
+        font-size: 15px;
+    }
+
+    .banner-title h1{
+        font-size: 2.5rem;
+    }
+
     .intro-info-title{
         font-size: 2.2rem;
     }
@@ -508,12 +538,18 @@ a:link, a:visited{
         gap: 20px;
     }
     
-    .card-container .card{
+    /* .card-container .card{
         flex-basis: calc(50% - 20px);
-    }
+    } */
 }
 
  @media screen and (min-width: 992px){
+
+    .banner-title{
+        height: 300px;
+    }
+
+
     .card-container{
         gap: 20px;
     }
