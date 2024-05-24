@@ -1,5 +1,7 @@
 /* Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu) */
 
+
+/* generella inställningar för sidan */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +9,15 @@
     font-family: 'Inter';
 }
 
+:root{
+    --lightblue: #EEF8FA;
+}
+
+/*
+
 body{
     width: 100%;
-}
+} 
 
 /* Ska tas bort*/
 .top-nav{
@@ -18,38 +26,54 @@ body{
     height: 90px;
     background-size:cover;
     background-color: rgb(150 43 86);
-}
+} 
+
+*/
 
 /* Skapa en klass med syfte att sätta blend-modes på bilder, slipper dubbletter av kod */
+/* bakgrundsbild på indexsidan */
 .main-bg-img{
-    width: 100%;
+    /* width: 100%; */
     height: 50vh;
     background-image: url(images/test-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
     background-size: cover;
-    margin: 0;
+    /* margin: 0; */
     display: flex;
     align-items: center;
 }
 
+/* placering av titeln på bakgrundsbilden, indexsidan*/
+.intro-info{
+    color: white;
+    width: 40%;
+    padding: 15px;
+    border-radius: 15px;
+    margin-left: 5%;
+}
+
+/* titel på indexsidan */
 .intro-info-title{
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* påverkar inte, ändras nere i brytpunkterna, ta bort? */
     font-weight: 700;
 }
 
+/* utseende på row med cards */
 .test-row-cards{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+/* runda hörn på cards */
 .card{
     border-radius: 10px;
 }
 
+/* förutsättningar för bilden i cardsen, indexsidan */
 .card-img-top{
-    width: 100%;
+    /* width: 100%; */
     height: 140px;
    /* background-image: url(cover_image.jpg); */
    border-radius: 10px 10px 0px 0px;
@@ -62,12 +86,12 @@ body{
     background-color: #EEF8FA;
     display: flex;
     justify-content: space-between;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0 0 10px 10px;
     /* font-weight: 500; */
 }
 
 .cards-main-title{
-    margin: 5% 0% 0% 5%;
+    margin: 5% 0 0 5%;
     font-size: 20px;
     font-weight: 900;
 }
@@ -78,14 +102,12 @@ body{
     padding: 20px 0px 0px 25px;
     width: 75%;
     font-size: 17px;
+    
     line-height: 1.35;
 }
 
-/* Sätta specifika klassnamn för bilderna istället ? Slipper lägga till 
-fler klasser för att få till bilderna på diagram sidorna*/
-
 .card:nth-child(1) .card-img-top{
-    background-image: url(images/alejo-reinoso-clothes-unsplash.jpg);
+    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
     
 }
 
@@ -101,33 +123,40 @@ fler klasser för att få till bilderna på diagram sidorna*/
     background-image: url(images/athanasios-papazacharias-boat-unsplash.jpg);
 }
 
-/* Flytta upp till ovanför intro-info-title?*/
 .intro-info{
     color: white;
-    width: 40%;
-    padding: 15px;
-    border-radius: 15px;
-    margin-left: 5%;
+    padding: 20px 0px 0px 25px;
+    width: 75%;
+    font-size: 17px;
+    line-height: 1.35;
 }
+
+/* innehåll i cards */
+.card-body-style{
+    background-color: var(--lightblue);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    /* font-weight: 500; */
+}
+
+/* 
 
 /* Hör till föredetta navigationen*/
 .nav-item{
     padding: 0 50px 5px 0;
     white-space: nowrap;
-}
+} 
 
 /* Hör till föredetta navigationen*/
 .nav-item:last-child{
     padding-right: 0px;
 }
 
-/*padding på menyn -- fråga mikaela*/
-/*
 .nav-item>.nav-link{
     padding: 0 0 2px 0;
 }
-*/
-
 
 a:link, a:visited{
     color: black;
@@ -154,6 +183,8 @@ a:link, a:visited{
     color: rgb(0, 0, 0, 0.5);
 }
 
+*/
+
 .shadow-effect{
     box-shadow: 0px 3px 3px #4242423d;
 }
@@ -165,6 +196,7 @@ a:link, a:visited{
     padding: 0;
 }
 
+/* linje under background-image, indexsidan */
 .bottom-header{
     background-color: #8FBABF;
     height: 50px ;
@@ -199,7 +231,7 @@ ul{
     padding-left: 15px;
 }
 
-/* Hör till föredetta referens designen*/
+
 .accordion-btn-style{
     width: 100%;
     font-size: 16px;
@@ -229,7 +261,7 @@ ul{
     display: flex;
     justify-items: center;
     align-items: center;
-}
+} 
 
 /* Hör till föredetta referens designen*/
 .navbar-toggler-icon .fa{
@@ -249,12 +281,15 @@ ul{
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-}
+} 
+
+
 
 .btn-style:hover{
     background-color: lightgrey;
 }
 
+*/
 
 .testt:hover{
     text-decoration: none;
@@ -269,13 +304,15 @@ ul{
     margin-left: 15px;
 }
 
-
+/* placering av ikoner */
 i{
     transform: translateY(10%);
     font-size: 25px;
-    color: #745d42e1
 }
 
+.fa{
+    color: black;
+}
 
 .fa-arrow-right{
     transform: translateY(15%);
@@ -327,15 +364,9 @@ i{
 /* Göra en egen klass för endast height och background-size och bild klasserna ovan kan användas i kombination på elementet*/
 
 .bg-img-intro{
-    background-image: url(images/alejo-reinoso-clothes-unsplash.jpg);
+    background-image: url(alejo-reinoso-clothes-unsplash.jpg);
     height: 300px;
-    background-size: cover;
-}
-
-/* Ta bort sen?*/
-.bg-image-third{
-    background-image: url(images/dan-meyers-field-unsplash.jpg);
-    height: 300px;
+    background-image: url(ella-ivanescu-factory-unsplash.jpg);
     background-size: cover;
 }
 
@@ -354,8 +385,8 @@ i{
 }
 
 .source-box{
-    margin-top: 10%;
-    background-color: #e4f1f2;
+    margin: 5% 0 7% 0;
+    background-color: var(--lightblue);
     width: 100%;
     padding: 20px;
     border-radius: 10px;
@@ -503,6 +534,10 @@ i{
     
 .card-container .card{
     flex-basis: calc(50% - 20px);
+}
+
+.card-container-3 .card{
+    flex-basis: calc((1/3) - 20px);
 }
     .nav-item{
         padding: 0px 40px 5px 0;
