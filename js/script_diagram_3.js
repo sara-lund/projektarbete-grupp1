@@ -89,9 +89,12 @@ fetch(request)
     for (let i = 0; i < gases2.length; i++) {
       const data = valuesRaw.splice(0, labels.length);
 
+      const colors = [];
+
       datasets[i] = {
         label: gases2[i],
         data,
+        backgroundColor: colors[i],
       };
     }
 

@@ -369,7 +369,7 @@ a:link, a:visited{
 }
 
 .source-box{
-    margin: 5% 0 0 0;
+    margin: 60px 0 0 0;
     background-color: var(--lightblue);
     width: 100%;
     padding: 20px;
@@ -484,6 +484,12 @@ a:link, a:visited{
     .card-container{
         gap: 20px;
     }
+
+    
+    .chart-4-heading {
+        margin-right: 8vw;
+    }
+
 
     /*
 
