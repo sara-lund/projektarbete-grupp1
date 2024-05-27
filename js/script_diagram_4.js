@@ -85,11 +85,32 @@ fetch(request)
     console.log("Import summerat:", sumValuesIm);
     console.log("Export summerat:", sumValuesEx);
 
-    const datasets = [{ label: "ton", data: sumValuesIm }];
-    const datasets2 = [{ label: "ton", data: sumValuesEx }];
+    const datasets = [
+      {
+        label: "ton",
+        data: sumValuesIm,
+        backgroundColor: [
+          "hsla(186, 50%, 65%, 0.65)",
+          "hsla(345, 100%, 92%, 0.65)",
+          "hsla(111, 80%, 84%, 0.65)",
+          "hsla(318, 60%, 83%, 0.65)",
+        ],
+      },
+    ];
+    const datasets2 = [
+      {
+        label: "ton",
+        data: sumValuesEx,
+        backgroundColor: [
+          "hsla(186, 60%, 65%, 0.65)",
+          "hsla(345, 100%, 92%, 0.65)",
+          "hsla(111, 90%, 84%, 0.65)",
+          "hsla(318, 70%, 83%, 0.65)",
+        ],
+      },
+    ];
 
     console.log(datasets);
-
     const data = {
       //labels hämtade från scb på rad 53
       labels,
@@ -110,6 +131,9 @@ fetch(request)
       data: data,
       options: {
         plugins: {
+          legend: {
+            labels: {},
+          },
           title: {
             display: true,
             text: "Import (i ton)",
