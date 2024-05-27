@@ -89,7 +89,21 @@ fetch(request)
     for (let i = 0; i < gases2.length; i++) {
       const data = valuesRaw.splice(0, labels.length);
 
-      const colors = [];
+      const colors = [
+        "#8fbabf",
+        "#edd2d2",
+        "#ff8cc6",
+        "#c8ebc2",
+        "#9d9dd5",
+        "#FBF7B1",
+        "#6f5e76",
+        "#ffa5a5",
+        "#88b279",
+        "#fac6ea",
+        "#E4F1F2",
+      ];
+
+      console.log(i);
 
       datasets[i] = {
         label: gases2[i],
@@ -140,6 +154,7 @@ fetch(request)
               text: "Ton",
             },
             stacked: true,
+            /*  min: 150000,*/
           },
         },
 
