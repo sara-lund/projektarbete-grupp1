@@ -75,8 +75,8 @@ fetch(request)
         pointRadius: 0,
         borderWidth: 0,
         tension: 0.4,
-        fill: 'origin',
-        backgroundColor: '#8fbabf50',
+        fill: "origin",
+        backgroundColor: "#8fbabf50",
       },
     ];
 
@@ -130,9 +130,11 @@ fetch(request)
             title: {
               display: true,
               text: "Ton",
+              padding: 10,
             },
+            display: true,
             min: 14500,
-            max: 17500, 
+            max: 17500,
           },
         },
       },

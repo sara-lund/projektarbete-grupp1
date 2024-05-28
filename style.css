@@ -391,6 +391,13 @@ a:link, a:visited{
     gap: 20px 0px;
 }
 
+.figure-text{
+    font-size: small;
+    text-align: end;
+    margin-top: 25px;
+    color: rgb(96, 95, 95);
+}
+
 
 /* Media queries */
 @media screen and (max-width: 576px ){

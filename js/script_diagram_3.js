@@ -109,6 +109,7 @@ fetch(request)
         label: gases2[i],
         data,
         backgroundColor: colors[i],
+        borderRadius: 0.2 * [i],
       };
     }
 
@@ -152,6 +153,7 @@ fetch(request)
             title: {
               display: true,
               text: "Ton",
+              padding: 10,
             },
             stacked: true,
             /*  min: 150000,*/
