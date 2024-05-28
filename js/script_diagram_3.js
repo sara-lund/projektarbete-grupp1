@@ -89,19 +89,7 @@ fetch(request)
     for (let i = 0; i < gases2.length; i++) {
       const data = valuesRaw.splice(0, labels.length);
 
-      const colors = [
-        "#8fbabf",
-        "#edd2d2",
-        "#ff8cc6",
-        "#c8ebc2",
-        "#9d9dd5",
-        "#FBF7B1",
-        "#6f5e76",
-        "#ffa5a5",
-        "#88b279",
-        "#fac6ea",
-        "#E4F1F2",
-      ];
+      const colors = ["#8fbabf","#ffd6e0","#c8ebc2","#e1c6d9","#bebeda","#fbf7b1","#f2d1ae","#ffadad","#aecca3","#C8E3E4","#E4F1F2"];
 
       console.log(i);
 
@@ -109,6 +97,9 @@ fetch(request)
         label: gases2[i],
         data,
         backgroundColor: colors[i],
+        
+        // borderRadius: {topLeft: 15, topRight: 15},
+        // borderSkipped: 'middle',
       };
     }
 
@@ -129,6 +120,7 @@ fetch(request)
       options: {
         plugins: {
           legend: {
+            
             labels: {
               boxHeight: "5",
               font: {

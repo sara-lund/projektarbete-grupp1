@@ -132,7 +132,9 @@ fetch(request)
       options: {
         plugins: {
           legend: {
-            labels: {},
+            labels: {
+              padding: 30
+            }
           },
           title: {
             display: true,

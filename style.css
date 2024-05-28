@@ -14,23 +14,6 @@
     color: #8fbabf79;
 }
 
-/*
-
-body{
-    width: 100%;
-} 
-
-
-.top-nav{
-    background-image: url(Images/cover_image.jpg);
-    background-blend-mode: hard-light;
-    height: 90px;
-    background-size:cover;
-    background-color: rgb(150 43 86);
-} 
-
-*/
-
 /* Skapa en klass med syfte att sätta blend-modes på bilder, slipper dubbletter av kod */
 /* bakgrundsbild på indexsidan */
 .main-bg-img{
@@ -49,9 +32,8 @@ body{
 .intro-info{
     color: white;
     width: 40%;
-    padding: 15px;
     border-radius: 15px;
-    margin-left: 5%;
+    margin-left: 1%;
 }
 
 /* titel på indexsidan */
@@ -65,6 +47,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding-bottom: 7%;
 }
 
 /* runda hörn på cards */
@@ -140,51 +123,8 @@ body{
     /* font-weight: 500; */
 }
 
-/* 
-
-.nav-item{
-    padding: 0 50px 5px 0;
-    white-space: nowrap;
-} 
-
-.nav-item:last-child{
-    padding-right: 0px;
-}
-
-.nav-item>.nav-link{
-    padding: 0 0 2px 0;
-}
-
-
-.menu-hover{
-    border-bottom: solid 2px rgb(0, 0, 0, 0);
-    transition: all 0.1s;
-}
-
-.active{
-    border-bottom: solid 2px black;
-    font-weight: bold;
-    pointer-events: none;
-}
-
-.menu-hover:hover{
-    border-bottom: solid 2px rgb(0, 0, 0, 0.5);
-    font-weight: bold;
-    transition: all 0.1s;
-    color: rgb(0, 0, 0, 0.5);
-}
-
- */
-
 .shadow-effect{
     box-shadow: 0px 3px 3px #4242423d;
-}
-
-.main-bg-test{
-    min-height: 120vh;
-    background-color:white;
-    margin: 0% 0% 5% 0%;
-    padding: 0;
 }
 
 /* linje under background-image, indexsidan */
@@ -192,12 +132,6 @@ body{
     background-color: #8FBABF;
     height: 50px ;
     width: 100%;
-}
-
-/* test */
-.col{
-    margin: 0;
-    padding: 0;
 }
 
 .text-test{
@@ -213,69 +147,6 @@ body{
 
 ul{
     padding-left: 15px;
-}
-
-.navbar-container{
-    padding-left: 15px;
-}
-
-/*
-.accordion-btn-style{
-    width: 100%;
-    font-size: 16px;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    text-align: start;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-
-.accordion-body{
-    background-color: white;
-    padding: 15px;
-    font-size: 14px;
-    margin-top: -6px;
-    margin-bottom: 15px;
-    border: 1px solid lightgrey;
-    border-radius: 0 0 5px 5px;
-}
-
-.navbar-toggler{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-} 
-
-.navbar-toggler-icon .fa{
-    justify-items: center;
-    align-items: center;
-
-}
-
-.btn-style{
-    width: 270px;
-    font-size: 16px;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    text-align: start;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-} 
-
-.btn-style:hover{
-    background-color: lightgrey;
-}
-
-*/
-
-.testt:hover{
-    text-decoration: none;
 }
 
 .text-content{
@@ -320,7 +191,6 @@ i{
 .chart-spacing {
     margin-bottom: 20px;
 }
-
 
 .back-link{
     width: 100%;

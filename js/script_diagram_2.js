@@ -141,6 +141,7 @@ fetch(request2)
       options: {
         scales: {
           y: {
+            type: 'logarithmic',
             title: {
               display: true,
               text: "Ton",
