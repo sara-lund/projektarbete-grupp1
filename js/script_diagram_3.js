@@ -84,20 +84,46 @@ fetch(request)
     const gases2 = [...new Set(gases)];
     console.log(gases2);
 
+    const gas = [
+      "Koldioxid",
+      "Metan",
+      "Lustgas",
+      "Fluorerande växthusgaser",
+      "Svaveldioxid",
+      "Kväveoxider",
+      "Kolmonoxid",
+      "Flyktiga organiska ämnen",
+      "Ammoniak",
+      "Partiklar, diameter <10 mikrometer",
+      "Partiklar, diameter <2,5 mikrometer",
+    ];
+
     const datasets = [];
 
     for (let i = 0; i < gases2.length; i++) {
       const data = valuesRaw.splice(0, labels.length);
 
-      const colors = ["#8fbabf","#ffd6e0","#c8ebc2","#e1c6d9","#bebeda","#fbf7b1","#f2d1ae","#ffadad","#aecca3","#C8E3E4","#E4F1F2"];
+      const colors = [
+        "#8fbabf",
+        "#ffd6e0",
+        "#c8ebc2",
+        "#e1c6d9",
+        "#bebeda",
+        "#fbf7b1",
+        "#f2d1ae",
+        "#ffadad",
+        "#aecca3",
+        "#C8E3E4",
+        "#E4F1F2",
+      ];
 
       console.log(i);
 
       datasets[i] = {
-        label: gases2[i],
+        label: gases2[i] + ": " + gas[i],
         data,
         backgroundColor: colors[i],
-        
+
         // borderRadius: {topLeft: 15, topRight: 15},
         // borderSkipped: 'middle',
       };
@@ -120,7 +146,6 @@ fetch(request)
       options: {
         plugins: {
           legend: {
-            
             labels: {
               boxHeight: "5",
               font: {
