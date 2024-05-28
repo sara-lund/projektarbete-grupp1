@@ -176,7 +176,6 @@ i{
 
 .text-format{
     column-count: 1;
-    text-wrap: keep-all;
 }
 
 /* Ha margin-left för rubriken för diagram 4 eller inte? */
