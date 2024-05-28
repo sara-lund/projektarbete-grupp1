@@ -144,6 +144,7 @@ fetch(request)
             title: {
               display: true,
               text: "Ton",
+              padding: 10,
             },
             stacked: true,
             /*  min: 150000,*/

@@ -117,12 +117,14 @@ fetch(request2)
         data: values2_2,
         fill: "origin",
         backgroundColor: "#745d42e1",
+        tension: 0.4,
       },
       {
         label: "Total utsläpp",
         data: values_2,
         fill: "origin",
         backgroundColor: "#79c7b74a",
+        tension: 0.4,
       },
     ];
 
