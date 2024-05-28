@@ -113,14 +113,14 @@ fetch(request2)
 
     const datasets2 = [
       {
-        label: "Utsläpp kläder/skor",
+        label: "Växthusgaser för kläder och skor (i ton)",
         data: values2_2,
         fill: "origin",
         backgroundColor: "#745d42e1",
         tension: 0.4,
       },
       {
-        label: "Total utsläpp",
+        label: "Totala växthusgaser (i ton)",
         data: values_2,
         fill: "origin",
         backgroundColor: "#79c7b74a",
@@ -143,7 +143,7 @@ fetch(request2)
       options: {
         scales: {
           y: {
-            type: 'logarithmic',
+            type: "logarithmic",
             title: {
               display: true,
               text: "Ton",
