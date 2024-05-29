@@ -25,7 +25,7 @@ querySCB = {
       code: "Tid",
       selection: {
         filter: "item",
-        values: ["2018", "2019", "2020", "2021"],
+        values: ['2017', "2018", "2019", "2020", "2021"],
       },
     },
   ],
@@ -63,9 +63,9 @@ fetch(request)
     const valuesExport = scbData.data.map((data) => data.values[1]);
     console.log("Export värden:", valuesExport);
 
-    const values61Ex = valuesExport.splice(0, 4);
+    const values61Ex = valuesExport.splice(0, labels.length);
 
-    const values61Im = valuesImport.splice(0, 4);
+    const values61Im = valuesImport.splice(0, labels.length);
 
     // https://stackoverflow.com/questions/24094466/sum-two-arrays-in-single-iteration
 
@@ -131,11 +131,6 @@ fetch(request)
       data: data,
       options: {
         plugins: {
-          legend: {
-            labels: {
-              padding: 30
-            }
-          },
           title: {
             display: true,
             text: "Import (i ton)",

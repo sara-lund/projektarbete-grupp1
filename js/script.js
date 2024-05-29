@@ -92,8 +92,8 @@ fetch(request)
       borderColor: "#1e424a",
       borderDash: [6, 6],
       borderWidth: 1,
-      xMax: 5,
-      xMin: 5,
+      xMax: 4,
+      xMin: 4,
       yMax: 0,
       yMin: 17500,
     };

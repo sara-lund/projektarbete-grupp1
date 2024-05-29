@@ -41,7 +41,7 @@ querySCB2 = {
       code: "Tid",
       selection: {
         filter: "item",
-        values: ["2018", "2019", "2020", "2021"],
+        values: ['2017', "2018", "2019", "2020", "2021"],
       },
     },
   ],
@@ -83,9 +83,6 @@ fetch(request2)
       summa2_2[label2] = 0;
     });
     console.log(summa_2);
-
-    // referens: https://stackoverflow.com/questions/74712508/javascript-sum-of-two-numbers-inside-an-array-print-index-of-numbers-whoose-sum
-    // och: https://www.w3schools.com/jsref/jsref_parsefloat.asp
 
     // loop för att summera mängd/år
     for (let i = 0; i < SCBdata2.data.length; i++) {

@@ -44,7 +44,7 @@ querySCB = {
       code: "Tid",
       selection: {
         filter: "item",
-        values: ["2018", "2019", "2020", "2021"],
+        values: ['2017', "2018", "2019", "2020", "2021"],
       },
     },
   ],
