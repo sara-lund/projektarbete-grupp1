@@ -1,10 +1,10 @@
 // Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
 
-//hitta url
+// hämta url
 const urlSCB =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/HA/HA0201/HA0201B/ImpExpKNTotAr";
 
-//info kring diagrammet
+// formulera förfrågan, json
 querySCB = {
   query: [
     {
@@ -34,19 +34,17 @@ querySCB = {
   },
 };
 
-//skapa förfrågan till given url, med given data som API:et vill ha
+// skapar en förfrågan till angiven url
 const request = new Request(urlSCB, {
   method: "POST",
   body: JSON.stringify(querySCB),
 });
 
-//skicka själva förfrågan via HTTP med fetch api
+// använder fetch för att skicka förfrågan/request
 fetch(request)
-  //gör om till json
   .then((response) => response.json())
-  //callback som körs när data hämtats färdigt.
   .then((scbData) => {
-    //titta på data
+    // dubbelkolla datan
     console.log(scbData);
 
     const labelsRaw = scbData.data.map((data) => data.key[1]);
@@ -67,7 +65,7 @@ fetch(request)
 
     const values61Im = valuesImport.splice(0, labels.length);
 
-    // Byta ut till värden för 62 så att det summeras med 61
+    // sumerar import samt export
     const sumValuesIm = values61Im.map((value, i) => {
       const sum = Number(value) + Number(valuesImport[i]);
       return sum;
@@ -78,11 +76,10 @@ fetch(request)
       return sum;
     });
 
-    // const data = valuesRaw.splice(0, labels.length);
-
     console.log("Import summerat:", sumValuesIm);
     console.log("Export summerat:", sumValuesEx);
 
+    // bestämmer utseende för dataseten
     const datasets = [
       {
         label: "ton",
@@ -109,21 +106,22 @@ fetch(request)
     ];
 
     console.log(datasets);
+
+    // anger vad som ska användas som data i diagrammen
     const data = {
-      //labels hämtade från scb på rad 53
       labels,
       datasets,
     };
 
     const data2 = {
-      //labels hämtade från scb på rad 53
       labels,
       datasets: datasets2,
     };
 
     console.log(data);
+    console.log(data2);
 
-    // Config för import diagram
+    // justerar diagram
     const config = {
       type: "polarArea",
       data: data,
@@ -141,7 +139,7 @@ fetch(request)
       },
     };
 
-    // Config för export diagram
+    // justerar diagram 2
     const config2 = {
       type: "polarArea",
       data: data2,
@@ -159,7 +157,7 @@ fetch(request)
       },
     };
 
-    //hämtar canvaselement med id scb
+    // hämtar canvaselement med id "diagram-1" / "diagram-2" och skapar diagrammen
     const canvas = document.getElementById("diagram4-1");
     const createChart = new Chart(canvas, config);
 

@@ -4,7 +4,7 @@
 const urlSCB =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/TotaltUtslappN";
 
-// JSON-fråga
+// formulera förfrågan, json
 const querySCB = {
   query: [
     {
@@ -45,36 +45,35 @@ const querySCB = {
   },
 };
 
-// Post request som sedan skickas med fetch
+// skapar en förfrågan till angiven url
 const request = new Request(urlSCB, {
   method: "POST",
-  // Översätter till JSON?
   body: JSON.stringify(querySCB),
 });
 
-// Fetch för att hämta data från SCB
+// använder fetch för att skicka förfrågan/request
 fetch(request)
-  // Översätter svaret (datan) från JSON
   .then((response) => response.json())
   .then((scbData) => {
-    // skriver ut en array av info från länken
+    // dubbelkolla datan
     console.log(scbData);
 
+    // sparar ner utsläpp av växthusgaser som values
     values = scbData.data.map((value) => value.values[0]);
     console.log(values);
 
-    // sparar ner utsläpp av växthusgaser som values
+    // multiplicerar med 1000 (värden från datasetet anges i kilo ton)
     for (let i = 0; i < values.length; i++) {
       values[i] *= 1000;
     }
-
+    // kollar värden efter loopen
     console.log(values);
 
     // sparar ner årtal som labels
     const labels = scbData.data.map((value) => value.key[2]);
     console.log("Årtal", labels);
 
-    // skapar linjediagram
+    // bestämmer utseende för datasetet
     const datasets = [
       {
         data: values,
@@ -86,6 +85,7 @@ fetch(request)
       },
     ];
 
+    // anger vad som ska användas som data i diagrammet
     const data = {
       labels,
       datasets,
@@ -93,6 +93,7 @@ fetch(request)
 
     console.log(data);
 
+    // vänstra linjen 
     const annotation1 = {
       type: "line",
       borderColor: "#1e424a",
@@ -104,6 +105,7 @@ fetch(request)
       yMin: 17500000,
     };
 
+    // högra linjen
     const annotation2 = {
       type: "line",
       borderColor: "#1e424a",
@@ -115,6 +117,7 @@ fetch(request)
       yMin: 17500000,
     };
 
+    // justerar diagram
     const config = {
       type: "line",
       data,
@@ -146,7 +149,7 @@ fetch(request)
       },
     };
 
-    // visar diagrammet
-    const canvas = document.getElementById("canvas");
+    // hämtar canvaselement med id "diagram 2" och skapar diagrammet
+    const canvas = document.getElementById("diagram1");
     const createChart = new Chart(canvas, config);
   });

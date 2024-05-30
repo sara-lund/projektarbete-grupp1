@@ -1,10 +1,10 @@
 // Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
 
-//hitta url
+// hämta url
 const urlSCB =
   " https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI1301/MI1301F/MI1301MPCOICOPN";
 
-//info kring diagrammet
+// formulera förfrågan, json
 querySCB = {
   query: [
     {
@@ -53,28 +53,28 @@ querySCB = {
   },
 };
 
-//skapa förfrågan till given url, med given data som API:et vill ha
+// skapar en förfrågan till angiven url
 const request = new Request(urlSCB, {
   method: "POST",
   body: JSON.stringify(querySCB),
 });
 
-//skicka själva förfrågan via HTTP med fetch api
+// använder fetch för att skicka förfrågan/request
 fetch(request)
-  //gör om till json
   .then((response) => response.json())
-  //callback som körs när data hämtats färdigt.
   .then((scbData) => {
-    //titta på data
+    // dubbelkolla datan
     console.log(scbData);
 
-    //behandla data
+    // sparar ner årtal som labels
     const labelsRaw = scbData.data.map((data) => data.key[3]);
     console.log(labelsRaw);
 
+    // sparar ner värden 
     const valuesRaw = scbData.data.map((data) => data.values[0]);
     console.log(valuesRaw);
 
+    // sparar ner växthusgas-sort 
     const gases = scbData.data.map((value) => value.key[1]);
     console.log("Växthusgas", gases);
 
@@ -84,6 +84,7 @@ fetch(request)
     const gases2 = [...new Set(gases)];
     console.log(gases2);
 
+    // utvecklad beskrivning av växthusgaser
     const gas = [
       "Koldioxid",
       "Metan",
@@ -98,11 +99,14 @@ fetch(request)
       "Partiklar, diameter <2,5 mikrometer",
     ];
 
+    // deklarerar tom variabel, för att använda i loop
     const datasets = [];
 
+    // delar upp datasetet i växthusgaser (sorter)
     for (let i = 0; i < gases2.length; i++) {
       const data = valuesRaw.splice(0, labels.length);
 
+      // färger till diagrammet
       const colors = [
         "#8fbabf",
         "#ffd6e0",
@@ -119,6 +123,7 @@ fetch(request)
 
       console.log(i);
 
+      // bestämmer utseende för datasetet, en ny färg per dataset
       datasets[i] = {
         label: gases2[i] + ": " + gas[i],
         data,
@@ -128,15 +133,15 @@ fetch(request)
 
     console.log(datasets);
 
+    // anger vad som ska användas som data i diagrammet
     const data = {
-      //labels hämtade från scb på rad 53
       labels,
       datasets,
     };
 
     console.log(data);
 
-    //charat type line istället för bar
+    // justerar diagram
     const config = {
       type: "bar",
       data,
@@ -174,7 +179,7 @@ fetch(request)
       },
     };
 
-    //hämtar canvaselement med id scb
+    // hämtar canvaselement med id "diagram 3" och skapar diagrammet
     const canvas = document.getElementById("diagram3");
     const createChart3 = new Chart(canvas, config);
   });

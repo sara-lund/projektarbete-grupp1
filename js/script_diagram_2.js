@@ -1,7 +1,10 @@
 // Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
+
+// hämta url
 const urlSCB2 =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI1301/MI1301F/MI1301MPCOICOPN";
 
+// formulera förfrågan, json
 querySCB2 = {
   query: [
     {
@@ -50,14 +53,17 @@ querySCB2 = {
   },
 };
 
+// skapar en förfrågan till angiven url
 const request2 = new Request(urlSCB2, {
   method: "POST",
   body: JSON.stringify(querySCB2),
 });
 
+// använder fetch för att skicka förfrågan/request
 fetch(request2)
   .then((response2) => response2.json())
   .then((SCBdata2) => {
+    // dubbelkolla datan
     console.log(SCBdata2);
 
     // Hämta ut årtalen
@@ -73,7 +79,7 @@ fetch(request2)
     const sumYear2 = [...new Set(labelsRaw2)];
     console.log(sumYear2);
 
-    // tom array att använda för summan
+    // tomma arrays att använda för summan
     let summa_2 = [];
     let summa2_2 = [];
 
@@ -84,14 +90,18 @@ fetch(request2)
     });
     console.log(summa_2);
 
-    // loop för att summera mängd/år
+    // loop för att summera mängd växthusgasutsläpp per år
     for (let i = 0; i < SCBdata2.data.length; i++) {
+
       const label2 = SCBdata2.data[i].key[3];
+
+      // tar ut värdet på plats [i]
       const value2 = parseFloat(SCBdata2.data[i].values[0]);
 
       // summan för varje år, label, sparas ner
       summa_2[label2] += value2;
 
+      // sparar ner summan om det är kategori 4 (kläder och skor)
       if (SCBdata2.data[i].key[2] === "4") {
         const label2 = SCBdata2.data[i].key[3];
         const value2 = parseFloat(SCBdata2.data[i].values[0]);
@@ -103,11 +113,12 @@ fetch(request2)
     console.log("Summa för respektive år: ", summa_2);
     console.log("Summa (kläder & skor) för respektive år: ", summa2_2);
 
-    // Skapar en array med värden och årtal
+    // Skapar en array med värden (summa) och årtal
     const values_2 = sumYear2.map((label2) => summa_2[label2]);
     const values2_2 = sumYear2.map((label2) => summa2_2[label2]);
     console.log(values_2);
 
+    // bestämmer utseende för dataseten
     const datasets2 = [
       {
         label: "Växthusgaser för kläder och skor (i ton)",
@@ -127,6 +138,7 @@ fetch(request2)
 
     console.log(datasets2);
 
+    // anger vad som ska användas som data i diagrammet 
     const data2 = {
       labels: labels2,
       datasets: datasets2,
@@ -134,6 +146,7 @@ fetch(request2)
 
     console.log(data2);
 
+    // justerar diagram
     const config2 = {
       type: "line",
       data: data2,
@@ -150,7 +163,7 @@ fetch(request2)
       },
     };
 
-    //hämtar canvaselement med id diagram 2
+    // hämtar canvaselement med id "diagram 2" och skapar diagrammet
     const canvas2 = document.getElementById("diagram2");
     const createChart2 = new Chart(canvas2, config2);
   });
