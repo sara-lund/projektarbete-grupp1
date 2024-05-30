@@ -60,8 +60,14 @@ fetch(request)
     // skriver ut en array av info från länken
     console.log(testData);
 
+    values = testData.data.map((value) => value.values[0]);
+    console.log(values);
+
     // sparar ner utsläpp av växthusgaser som values
-    const values = testData.data.map((value) => value.values[0]);
+    for (let i = 0; i < values.length; i++) {
+      values[i] *= 1000;
+    }
+
     console.log(values);
 
     // sparar ner årtal som labels
@@ -95,7 +101,7 @@ fetch(request)
       xMax: 4,
       xMin: 4,
       yMax: 0,
-      yMin: 17500,
+      yMin: 17500000,
     };
 
     const annotation2 = {
@@ -106,7 +112,7 @@ fetch(request)
       xMax: 8,
       xMin: 8,
       yMax: 0,
-      yMin: 17500,
+      yMin: 17500000,
     };
 
     const config = {
@@ -133,8 +139,8 @@ fetch(request)
               padding: 10,
             },
             display: true,
-            min: 14500,
-            max: 17500,
+            min: 14500000,
+            max: 17500000,
           },
         },
       },
