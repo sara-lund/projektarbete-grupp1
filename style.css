@@ -11,19 +11,16 @@
 
 :root{
     --lightblue: #EEF8FA;
-    color: #8fbabf79;
 }
 
 /* Skapa en klass med syfte att sätta blend-modes på bilder, slipper dubbletter av kod */
 /* bakgrundsbild på indexsidan */
 .main-bg-img{
-    /* width: 100%; */
     height: 50vh;
     background-image: url(Images/test-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
     background-size: cover;
-    /* margin: 0; */
     display: flex;
     align-items: center;
 }
@@ -38,7 +35,6 @@
 
 /* titel på indexsidan */
 .intro-info-title{
-    font-size: 2.4rem; /* påverkar inte, ändras nere i brytpunkterna, ta bort? */
     font-weight: 700;
 }
 
@@ -57,13 +53,11 @@
 
 /* förutsättningar för bilden i cardsen, indexsidan */
 .card-img-top{
-    /* width: 100%; */
     height: 140px;
-   /* background-image: url(cover_image.jpg); */
-   border-radius: 10px 10px 0px 0px;
-   background-size: cover;
-   background-blend-mode: darken;
-   background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 10px 10px 0px 0px;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.45);
 }
 
 .card-body-style{
@@ -71,7 +65,6 @@
     display: flex;
     justify-content: space-between;
     border-radius: 0 0 10px 10px;
-    /* font-weight: 500; */
 }
 
 .cards-main-title{
@@ -120,7 +113,6 @@
     display: flex;
     justify-content: space-between;
     border-radius: 0 0 10px 10px;
-    /* font-weight: 500; */
 }
 
 .shadow-effect{
@@ -181,11 +173,6 @@ i{
 /* Ha margin-left för rubriken för diagram 4 eller inte? */
 .chart-4-heading {
     margin-left: 12vw;
-}
-
-/* Hör till föredetta referens designen*/
-.accordion-body{
-    overflow-wrap: break-word;
 }
 
 .chart-spacing {
@@ -313,12 +300,6 @@ a:link, a:visited{
     .card-container{
         gap: 20px 0px;
     }
-
-    /*
-    .card-container .card{
-    flex-basis: calc(50% - 20px);
-    } 
-    */
 }
 
 
@@ -334,23 +315,14 @@ a:link, a:visited{
         font-size: 2.2rem;
     }
 
-
     .text-content {
         font-size: 0.9rem;
     }
-
-    /* 
-    .top-nav{
-    height: 140px;
-    }
-
-    */
 
     .heading{
         font-size: 1.2rem;
     }
 
-        
     .intro-info-title{
         font-size: 2rem;
     }
@@ -362,22 +334,10 @@ a:link, a:visited{
     .card-container{
         gap: 20px;
     }
-
     
     .chart-4-heading {
         margin-right: 8vw;
     }
-
-
-    /*
-
-    .card-container .card{
-        flex-basis: calc(50% - 20px);
-        
-    } 
-
-    */
-
 }
 
 @media screen and (min-width: 768px){
@@ -421,10 +381,6 @@ a:link, a:visited{
     .card-container{
         gap: 20px;
     }
-    
-    /* .card-container .card{
-        flex-basis: calc(50% - 20px);
-    } */
 }
 
  @media screen and (min-width: 992px){
@@ -432,7 +388,6 @@ a:link, a:visited{
     .banner-title{
         height: 300px;
     }
-
 
     .card-container{
         gap: 20px;

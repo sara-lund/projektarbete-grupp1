@@ -123,9 +123,6 @@ fetch(request)
         label: gases2[i] + ": " + gas[i],
         data,
         backgroundColor: colors[i],
-
-        // borderRadius: {topLeft: 15, topRight: 15},
-        // borderSkipped: 'middle',
       };
     }
 
@@ -172,20 +169,8 @@ fetch(request)
               padding: 10,
             },
             stacked: true,
-            /*  min: 150000,*/
           },
         },
-
-        /*  scales: {
-          x: {
-            display: true,
-          },
-          y: {
-            display: true,
-            type: 'logarithmic',
-          }
-        }
-         */
       },
     };
 

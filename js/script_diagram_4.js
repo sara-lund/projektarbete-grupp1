@@ -67,8 +67,6 @@ fetch(request)
 
     const values61Im = valuesImport.splice(0, labels.length);
 
-    // https://stackoverflow.com/questions/24094466/sum-two-arrays-in-single-iteration
-
     // Byta ut till värden för 62 så att det summeras med 61
     const sumValuesIm = values61Im.map((value, i) => {
       const sum = Number(value) + Number(valuesImport[i]);
