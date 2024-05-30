@@ -17,7 +17,7 @@
 /* bakgrundsbild på indexsidan */
 .main-bg-img{
     height: 50vh;
-    background-image: url(Images/test-img.jpg);
+    background-image: url(Images/bg-img.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.428);
     background-size: cover;
@@ -39,7 +39,7 @@
 }
 
 /* utseende på row med cards */
-.test-row-cards{
+.row-cards{
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -126,13 +126,9 @@
     width: 100%;
 }
 
-.text-test{
-    margin: 5%;
-}
-
 .heading{
     font-weight: 700;
-    font-size:x-large;
+    font-size: x-large;
     margin-top: 120px;
     margin-bottom: 30px;
 }
@@ -414,7 +410,7 @@ a:link, a:visited{
         font-size: 1rem;
     }
 
-    .test-row-cards{
+    .row-cards{
         margin: 0 50px 0 50px;
     }  
 } 

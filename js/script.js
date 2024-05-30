@@ -1,11 +1,11 @@
 // Grupp 1: Alva Sundberg (h20alsun), Sara Lundequist (h22sarlu)
 
 // Länk för att hämta ut data för totala utsläpp i industrin 2013-2022
-const testDataUrl =
+const urlSCB =
   "https://api.scb.se/OV0104/v1/doris/sv/ssd/START/MI/MI0107/TotaltUtslappN";
 
 // JSON-fråga
-const testQuery = {
+const querySCB = {
   query: [
     {
       code: "Vaxthusgaser",
@@ -46,21 +46,21 @@ const testQuery = {
 };
 
 // Post request som sedan skickas med fetch
-const request = new Request(testDataUrl, {
+const request = new Request(urlSCB, {
   method: "POST",
   // Översätter till JSON?
-  body: JSON.stringify(testQuery),
+  body: JSON.stringify(querySCB),
 });
 
 // Fetch för att hämta data från SCB
 fetch(request)
   // Översätter svaret (datan) från JSON
   .then((response) => response.json())
-  .then((testData) => {
+  .then((scbData) => {
     // skriver ut en array av info från länken
-    console.log(testData);
+    console.log(scbData);
 
-    values = testData.data.map((value) => value.values[0]);
+    values = scbData.data.map((value) => value.values[0]);
     console.log(values);
 
     // sparar ner utsläpp av växthusgaser som values
@@ -71,7 +71,7 @@ fetch(request)
     console.log(values);
 
     // sparar ner årtal som labels
-    const labels = testData.data.map((value) => value.key[2]);
+    const labels = scbData.data.map((value) => value.key[2]);
     console.log("Årtal", labels);
 
     // skapar linjediagram
@@ -148,5 +148,5 @@ fetch(request)
 
     // visar diagrammet
     const canvas = document.getElementById("canvas");
-    const testChart = new Chart(canvas, config);
+    const createChart = new Chart(canvas, config);
   });

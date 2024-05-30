@@ -152,5 +152,5 @@ fetch(request2)
 
     //hämtar canvaselement med id diagram 2
     const canvas2 = document.getElementById("diagram2");
-    const testing = new Chart(canvas2, config2);
+    const createChart2 = new Chart(canvas2, config2);
   });

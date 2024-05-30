@@ -176,5 +176,5 @@ fetch(request)
 
     //hämtar canvaselement med id scb
     const canvas = document.getElementById("diagram3");
-    const testing = new Chart(canvas, config);
+    const createChart3 = new Chart(canvas, config);
   });
